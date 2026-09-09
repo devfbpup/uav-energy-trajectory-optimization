@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Evolutionary Trajectory Optimization for Energy-Constrained UAVs: reference implementation and validation records"
+authors:
+  - family-names: Saha
+    given-names: Devjyoti
+    affiliation: "Polytechnic University of the Philippines, Manila, Philippines"
+    email: devjyotisaha@iskolarngbayan.pup.edu.ph
+  - family-names: Magsumbol
+    given-names: Jo-Ann V.
+    affiliation: "De La Salle University, Manila, Philippines"
+version: 0.2.0
+license: MIT
+repository-code: "https://github.com/devfbpup/uav-energy-trajectory-optimization"
+keywords:
+  - unmanned aerial vehicles
+  - trajectory optimization
+  - genetic algorithm
+  - path planning
+  - energy-aware planning
