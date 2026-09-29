@@ -1,0 +1,2 @@
+# Store and check out every file byte-for-byte so audit.py checksums match on all platforms.
+* -text

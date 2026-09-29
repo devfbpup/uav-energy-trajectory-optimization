@@ -1,0 +1,37 @@
+{
+  "success": false,
+  "reason": "no_geometric_path",
+  "violation": 1000000000.0,
+  "planner": "rrt_star",
+  "scene": "urban_b",
+  "route": "urban_b_r0",
+  "route_set": "heldout",
+  "seed": 4,
+  "runtime_s": 0.20846970899992812,
+  "scene_kind": "urban",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "procedural_dense_city",
+    "asset": "urban_b.obj",
+    "asset_sha256": "316c7ebd5b09ba6631282cd4d7d37282b7b17bc497f266a8df7fb03276add3bc",
+    "triangles": 360,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 46068,
+    "boxes": 123,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "route_set": "heldout",
+    "route_index": 0
+  },
+  "history": []
+}

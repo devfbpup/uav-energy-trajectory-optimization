@@ -1,0 +1,98 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      28.0,
+      4.0,
+      10.0
+    ],
+    [
+      27.806194996398563,
+      61.79268730564401,
+      10.143803310698347
+    ],
+    [
+      47.34829552150613,
+      91.90572300845075,
+      6.004058359399854
+    ],
+    [
+      53.490487837246974,
+      128.29767491193113,
+      5.49765431389059
+    ],
+    [
+      51.485373474603286,
+      146.5736355931212,
+      6.747274915571353
+    ],
+    [
+      132.0,
+      156.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    21.88917115618593,
+    13.686591776644017,
+    13.979708855219188,
+    7.36657597738938,
+    30.72790522092297
+  ],
+  "length_m": 230.39735537778944,
+  "flight_duration_s": 87.64995298636148,
+  "energy_quotient_m1p5_sminus2": 2702.939358488695,
+  "equivalent_hover_time_s": 87.96963523341041,
+  "model_electrical_energy_j": 15842.090311705328,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 8157.909688294672,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.74271316689,
+  "decoded_waypoints": 6,
+  "retained_stops": 4,
+  "battery_energy_j": 15842.090311705328,
+  "planner": "rrt_star",
+  "scene": "urban_a",
+  "route": "urban_a_r1",
+  "route_set": "heldout",
+  "seed": 0,
+  "runtime_s": 0.20700579599997582,
+  "scene_kind": "urban",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "procedural_dense_city",
+    "asset": "urban_a.obj",
+    "asset_sha256": "0a9045f9cba190cf0a20e43efde8d253a517fcf92d84d96b01860102d90edc93",
+    "triangles": 372,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 44296,
+    "boxes": 131,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "route_set": "heldout",
+    "route_index": 1
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 1.960592098813842,
+  "exact_max_vertical_mps": 0.5671259806937808,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 1.6824178813272701e-16,
+  "energy_quadrature_relative_difference": 0.0,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

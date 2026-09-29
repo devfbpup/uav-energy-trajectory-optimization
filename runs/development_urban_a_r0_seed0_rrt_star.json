@@ -1,0 +1,104 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      4.0,
+      4.0,
+      10.0
+    ],
+    [
+      49.654453828568975,
+      0.5975568042211599,
+      16.47217849529883
+    ],
+    [
+      51.59372121010762,
+      24.769849065673917,
+      29.767172113348867
+    ],
+    [
+      128.2714921409615,
+      101.82223411800899,
+      28.538394713658747
+    ],
+    [
+      120.78405413839917,
+      110.23036660578784,
+      21.201625354106255
+    ],
+    [
+      145.3592442558659,
+      124.97013759122393,
+      14.551519989568408
+    ],
+    [
+      156.0,
+      156.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    17.51199629395456,
+    12.588697082091128,
+    41.17425461577102,
+    6.947003487326265,
+    11.142106094453826,
+    12.543399351207366
+  ],
+  "length_m": 258.5767675218625,
+  "flight_duration_s": 101.90745692480417,
+  "energy_quotient_m1p5_sminus2": 3141.5322583967754,
+  "equivalent_hover_time_s": 102.24404257433223,
+  "model_electrical_energy_j": 18398.325312723166,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 5601.674687276834,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.53953918503714,
+  "decoded_waypoints": 7,
+  "retained_stops": 5,
+  "battery_energy_j": 18398.325312723166,
+  "planner": "rrt_star",
+  "scene": "urban_a",
+  "route": "urban_a_r0",
+  "route_set": "development",
+  "seed": 0,
+  "runtime_s": 0.2743829610000148,
+  "scene_kind": "urban",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "procedural_dense_city",
+    "asset": "urban_a.obj",
+    "asset_sha256": "0a9045f9cba190cf0a20e43efde8d253a517fcf92d84d96b01860102d90edc93",
+    "triangles": 372,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 44296,
+    "boxes": 131,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "route_set": "development",
+    "route_index": 0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 1.6076337124150704,
+  "exact_max_vertical_mps": 1.9801980198019802,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 2.895067205953417e-16,
+  "energy_quadrature_relative_difference": 0.0,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

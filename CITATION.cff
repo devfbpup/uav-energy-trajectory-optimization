@@ -1,20 +1,34 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-title: "Evolutionary Trajectory Optimization for Energy-Constrained UAVs: reference implementation and validation records"
+message: "If you use this software or benchmark, please cite the concept DOI 10.5281/zenodo.22679145, which always resolves to the newest archived version, or the version DOI shown on that Zenodo record."
+title: "Evolutionary Trajectory Optimization for Energy-Constrained UAVs in Dense Urban Environments: reproducible benchmark code"
+version: 0.3.0
+date-released: 2026-09-10
+type: software
+license: MIT
+repository-code: "https://github.com/devfbpup/uav-energy-trajectory-optimization"
 authors:
   - family-names: Saha
     given-names: Devjyoti
-    affiliation: "Polytechnic University of the Philippines, Manila, Philippines"
-    email: devjyotisaha@iskolarngbayan.pup.edu.ph
+    affiliation: "Department of Electronics Engineering, Polytechnic University of the Philippines"
   - family-names: Magsumbol
     given-names: Jo-Ann V.
-    affiliation: "De La Salle University, Manila, Philippines"
-version: 0.2.0
-license: MIT
-repository-code: "https://github.com/devfbpup/uav-energy-trajectory-optimization"
+    affiliation: "Department of Electronics Engineering, Polytechnic University of the Philippines"
 keywords:
-  - unmanned aerial vehicles
-  - trajectory optimization
+  - UAV trajectory optimization
+  - energy-constrained planning
   - genetic algorithm
-  - path planning
-  - energy-aware planning
+  - mesh ingestion
+  - reproducibility
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22679145
+    description: "Concept DOI (all versions)"
+references:
+  - type: article
+    title: "Evolutionary Trajectory Optimization for Energy-Constrained UAVs in Dense Urban Environments: A Data-Driven Approach using UrbanScene3D"
+    year: 2026
+    authors:
+      - family-names: Saha
+        given-names: Devjyoti
+      - family-names: Magsumbol
+        given-names: Jo-Ann V.

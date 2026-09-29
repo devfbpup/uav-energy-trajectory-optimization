@@ -1,0 +1,116 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      4.0,
+      4.0,
+      10.0
+    ],
+    [
+      1.927181297021369,
+      37.59520319433135,
+      18.115294397679094
+    ],
+    [
+      45.240468674701035,
+      70.7938064379293,
+      28.139290806743723
+    ],
+    [
+      75.94408635351975,
+      79.99880140132201,
+      11.767982090716526
+    ],
+    [
+      78.29930654158235,
+      89.71405837051944,
+      3.9799483909383655
+    ],
+    [
+      97.08056531571262,
+      98.86815967627868,
+      15.973068687319541
+    ],
+    [
+      131.7390497023855,
+      102.27691443490883,
+      17.656848660744014
+    ],
+    [
+      153.30748764045552,
+      135.7584487852405,
+      10.972941909629496
+    ],
+    [
+      156.0,
+      156.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    13.113680740066325,
+    21.015228398633848,
+    15.501582940488253,
+    7.374294409477446,
+    11.355985780635926,
+    13.205645822736997,
+    15.295523521905084,
+    7.758870024716
+  ],
+  "length_m": 258.5586196036711,
+  "flight_duration_s": 104.62081163865989,
+  "energy_quotient_m1p5_sminus2": 3229.7192639328696,
+  "equivalent_hover_time_s": 105.11416938090424,
+  "model_electrical_energy_j": 18902.333851873387,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 5097.666148126613,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.67470091092778,
+  "decoded_waypoints": 9,
+  "retained_stops": 7,
+  "battery_energy_j": 18902.333851873387,
+  "planner": "rrt_star",
+  "scene": "urban_b",
+  "route": "urban_b_r0",
+  "route_set": "development",
+  "seed": 4,
+  "runtime_s": 0.23500297200001796,
+  "scene_kind": "urban",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "procedural_dense_city",
+    "asset": "urban_b.obj",
+    "asset_sha256": "316c7ebd5b09ba6631282cd4d7d37282b7b17bc497f266a8df7fb03276add3bc",
+    "triangles": 360,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 46068,
+    "boxes": 123,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "route_set": "development",
+    "route_index": 0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 1.9605920988138417,
+  "exact_max_vertical_mps": 1.9801980198019802,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 0.0,
+  "energy_quadrature_relative_difference": 1.924618851619297e-16,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

@@ -1,0 +1,225 @@
+{
+  "version": "0.3.0",
+  "synthetic_scenes": [
+    "sparse",
+    "wall",
+    "culdesac"
+  ],
+  "urban_scenes": [
+    "urban_a",
+    "urban_b",
+    "urban_c"
+  ],
+  "synthetic_development_route_y": [
+    16.0,
+    20.0,
+    24.0
+  ],
+  "synthetic_heldout_route_y": [
+    14.0,
+    26.0
+  ],
+  "urban_routes": {
+    "development": [
+      [
+        [
+          4.0,
+          4.0,
+          10.0
+        ],
+        [
+          156.0,
+          156.0,
+          10.0
+        ]
+      ],
+      [
+        [
+          4.0,
+          76.0,
+          10.0
+        ],
+        [
+          156.0,
+          76.0,
+          10.0
+        ]
+      ],
+      [
+        [
+          76.0,
+          4.0,
+          10.0
+        ],
+        [
+          76.0,
+          156.0,
+          10.0
+        ]
+      ]
+    ],
+    "heldout": [
+      [
+        [
+          4.0,
+          156.0,
+          10.0
+        ],
+        [
+          156.0,
+          4.0,
+          10.0
+        ]
+      ],
+      [
+        [
+          28.0,
+          4.0,
+          10.0
+        ],
+        [
+          132.0,
+          156.0,
+          10.0
+        ]
+      ]
+    ]
+  },
+  "urban_assets": {
+    "urban_a": {
+      "asset": "assets/urban_a.obj",
+      "sha256": "0a9045f9cba190cf0a20e43efde8d253a517fcf92d84d96b01860102d90edc93",
+      "buildings": null
+    },
+    "urban_b": {
+      "asset": "assets/urban_b.obj",
+      "sha256": "316c7ebd5b09ba6631282cd4d7d37282b7b17bc497f266a8df7fb03276add3bc",
+      "buildings": null
+    },
+    "urban_c": {
+      "asset": "assets/urban_c.obj",
+      "sha256": "48db175db5a54da88a76ebf1f6f4c70a7283aebc7e405851a19375e560a49b87",
+      "buildings": null
+    }
+  },
+  "urban_workspace": [
+    [
+      0.0,
+      0.0,
+      2.0
+    ],
+    [
+      160.0,
+      160.0,
+      30.0
+    ]
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "planners": [
+    "astar",
+    "rrt_star",
+    "distance_ga",
+    "proxy_ga",
+    "time_ga",
+    "energy_ga"
+  ],
+  "budgets": [
+    150,
+    300,
+    600,
+    1200
+  ],
+  "rrt_budgets": [
+    250,
+    500,
+    1000,
+    2000,
+    4000
+  ],
+  "ablations": [
+    "full",
+    "no_shortcutting",
+    "no_warm_start",
+    "no_warm_start_no_shortcutting"
+  ],
+  "settings_synthetic": {
+    "g": 9.81,
+    "max_speed": 5.0,
+    "max_acceleration": 2.0,
+    "max_vertical_speed": 2.0,
+    "vehicle_radius": 0.25,
+    "clearance": 0.5,
+    "grid_step": 2.0,
+    "population": 24,
+    "generations": 25,
+    "max_waypoints": 16,
+    "rrt_iterations": 500,
+    "energy_reference_s": 100.0,
+    "length_reference_m": 100.0,
+    "time_reference_s": 100.0,
+    "energy_reference_j": 10000.0,
+    "evaluation_budget": null,
+    "warm_start": true,
+    "shortcutting": true,
+    "enforce_energy_budget": true,
+    "propulsion": {
+      "g": 9.81,
+      "mass_kg": 1.5,
+      "rotors": 4,
+      "rotor_radius_m": 0.12,
+      "air_density_kgpm3": 1.225,
+      "figure_of_merit": 0.7,
+      "hover_profile_power_w": 22.0,
+      "drag_area_m2": 0.06,
+      "electrical_efficiency": 0.85,
+      "ancillary_power_w": 10.0,
+      "mission_energy_allowance_j": 30000.0,
+      "reserve_fraction": 0.2
+    }
+  },
+  "settings_urban": {
+    "g": 9.81,
+    "max_speed": 5.0,
+    "max_acceleration": 2.0,
+    "max_vertical_speed": 2.0,
+    "vehicle_radius": 0.25,
+    "clearance": 0.5,
+    "grid_step": 4.0,
+    "population": 24,
+    "generations": 25,
+    "max_waypoints": 16,
+    "rrt_iterations": 500,
+    "energy_reference_s": 100.0,
+    "length_reference_m": 100.0,
+    "time_reference_s": 100.0,
+    "energy_reference_j": 10000.0,
+    "evaluation_budget": null,
+    "warm_start": true,
+    "shortcutting": true,
+    "enforce_energy_budget": true,
+    "propulsion": {
+      "g": 9.81,
+      "mass_kg": 1.5,
+      "rotors": 4,
+      "rotor_radius_m": 0.12,
+      "air_density_kgpm3": 1.225,
+      "figure_of_merit": 0.7,
+      "hover_profile_power_w": 22.0,
+      "drag_area_m2": 0.06,
+      "electrical_efficiency": 0.85,
+      "ancillary_power_w": 10.0,
+      "mission_energy_allowance_j": 30000.0,
+      "reserve_fraction": 0.2
+    }
+  },
+  "tolerance": 1e-09,
+  "started_utc": "2026-09-10T01:51:24.065456+00:00",
+  "python": "3.13.14",
+  "numpy": "2.5.3"
+}

@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      4.0,
+      20.0,
+      4.0
+    ],
+    [
+      17.377057657759565,
+      21.31213585790327,
+      12.892766597920174
+    ],
+    [
+      23.852519189967463,
+      20.11868627846441,
+      13.90539291990505
+    ],
+    [
+      36.0,
+      20.0,
+      4.0
+    ]
+  ],
+  "segment_durations_s": [
+    8.420338372405665,
+    4.429208811278824,
+    9.379168921035095
+  ],
+  "length_m": 38.45322334638665,
+  "flight_duration_s": 22.228716104719584,
+  "energy_quotient_m1p5_sminus2": 687.5545198899354,
+  "equivalent_hover_time_s": 22.377091120393782,
+  "model_electrical_energy_j": 4001.206214048968,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 19998.79378595103,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.00167869341922,
+  "decoded_waypoints": 4,
+  "retained_stops": 2,
+  "battery_energy_j": 4001.206214048968,
+  "planner": "rrt_star",
+  "scene": "wall",
+  "route": "wall_y20",
+  "route_set": "development",
+  "seed": 0,
+  "runtime_s": 0.23585337100000459,
+  "scene_kind": "synthetic",
+  "provenance": {
+    "kind": "synthetic_boxes",
+    "source": "hand specified",
+    "route_y": 20.0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 3.5887928762131978,
+  "exact_max_acceleration_mps2": 1.9605920988138417,
+  "exact_max_vertical_mps": 1.9801980198019802,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 0.0,
+  "energy_quadrature_relative_difference": 1.1365256539134693e-16,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

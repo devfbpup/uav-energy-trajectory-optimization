@@ -1,98 +1,121 @@
 # Evolutionary Trajectory Optimization for Energy-Constrained UAVs in Dense Urban Environments
 
-Reference implementation, test suite, and reproduction script for the numerical
-results reported in the article of the same title.
+Reproducible benchmark code for the paper *"Evolutionary Trajectory Optimization for
+Energy-Constrained UAVs in Dense Urban Environments: A Data-Driven Approach using
+UrbanScene3D"*.
 
-Authors: Devjyoti Saha (Polytechnic University of the Philippines) and
-Jo-Ann V. Magsumbol (De La Salle University).
+**Version 0.3.0**
 
-## What this code is
+Authors:
 
-A deterministic, dependency-light study of whether ranking quintic
-rest-to-rest trajectories by an acceleration-based energy proxy produces
-different routes than ranking them by path length.
+- Devjyoti Saha — Department of Electronics Engineering, Polytechnic University of the Philippines
+- Jo-Ann V. Magsumbol — Department of Electronics Engineering, Polytechnic University of the Philippines
 
-- `uav_planning.py` — planners (grid A*, RRT*, genetic algorithm), the quintic
-  time-scaling model, the segment/axis-aligned-box collision test, and the
-  energy proxy. Version `0.2.0`.
-  SHA-256: `98fde7c4e91652f377a80fedc51b007db0b3534261dc46d3b009c4aa0bbf0a37`
-- `test_validation.py` — 24 unit tests, including a 600-sample cross-check of
-  the collision routine against an independently written separating-axis
-  formulation, an analytic hover identity, and a quadrature convergence test.
-- `reproduce.py` — the full experimental protocol: 3 synthetic scenes x 3
-  routes x 5 seeds x 4 planners = 180 attempts. Writes `runs/`, `protocol.json`
-  and `summary.json`, and with `--check` compares the aggregates against the
-  values reported in the article.
+> Affiliations here are synchronised with the manuscript, `CITATION.cff` and the archive.
+> Earlier releases listed a different affiliation for the second author in this README; the
+> manuscript affiliation (PUP) is authoritative.
 
-## What this code is not
+## What this release adds over v0.2.0
 
-These limits are stated in the article and repeated here so the code is not
-misread:
+| Area | v0.2.0 | v0.3.0 |
+| --- | --- | --- |
+| Energy | acceleration proxy only | proxy **and** a parameterised electrical propulsion model in joules, with a hard mission-energy constraint (30 000 J allowance, 20 % reserve → 24 000 J usable) |
+| Scenes | 3 synthetic box scenes | 3 synthetic + 3 mesh-ingested dense urban scenes (OBJ → voxels → conservative boxes, ~130 boxes each) |
+| Objectives | distance, proxy | distance, proxy, **time**, **energy** |
+| Routes | 9 development | 18 development + **12 held-out** |
+| Statistics | pooled means | route-level cluster bootstrap (10 000 resamples) + sign-flip permutation tests with Holm correction |
+| Budgets | fixed | matched evaluation-budget sweep and quality-versus-runtime curves |
+| Ablations | none | warm start, shortcutting, both |
+| Artefacts | reproduce script | plotting/export script, audit script, checksum manifest, per-attempt records |
+| Claim wording | "reproduced exactly" | "matched the reference aggregates within the specified tolerance" (1e-9 rel/abs) |
 
-- **The geometry is synthetic.** Three hand-specified axis-aligned box scenes
-  in a 40 x 40 x 18 m volume. No UrbanScene3D mesh, no OpenStreetMap extract,
-  and no registered real city model is used anywhere in this repository.
-- **The energy quantity is an uncalibrated proxy, not joules.** It is the
-  integral of the 3/2 power of proper acceleration, divided by g^1.5, so its
-  unit is seconds — an equivalent hover time. No motor, propeller, battery, or
-  aerodynamic parameters were fitted or measured, and `battery_energy_j` is
-  deliberately `null` in every saved record.
-- **There is no controller and no attitude dynamics.** Trajectories are C^2
-  rest-to-rest straight segments; yaw, drag, wind, and closed-loop tracking are
-  out of scope.
-- **The planner comparisons are descriptive.** Five seeds per route with no
-  matched computational budget and no held-out routes; no significance testing
-  is claimed.
+## Files
 
-## Requirements
+| File | Purpose |
+| --- | --- |
+| `uav_planning.py` | world model, quintic decoder, proxy and propulsion energy, energy constraint, A*, RRT*, genetic planner (4 objectives) |
+| `urban_scenes.py` | procedural city mesh generator, OBJ reader, voxeliser, greedy box decomposition, UrbanScene3D-compatible ingestion entry point, scene/route registry |
+| `reproduce.py` | protocol runner: main run, budget sweep, ablations, aggregation, reference writing and tolerance checking |
+| `make_figures.py` | all ten figures (PNG + PDF) and a CSV export of every plotted series, plus two summary tables |
+| `audit.py` | writes and verifies `manifest.sha256` / `manifest.json` (bitwise SHA-256 over every tracked artefact) |
+| `test_validation.py` | 46 unit tests (geometry, SAT cross-check, kinematics, quadrature, power model, constraint, planners, ingestion) |
+| `paper/main.tex`, `paper/main.html`, `paper/main.pdf` | manuscript source and rendered PDF |
 
-Python 3.13 and NumPy. The results reported in the article were produced with
-Python 3.13.12 and NumPy 2.4.6 and independently reproduced bit-for-bit on a
-second machine.
+Generated artefacts: `protocol.json`, `records.json`, `runs/` (one JSON per attempt),
+`budget_sweep.json`, `ablations.json`, `summary.json`, `reference.json`,
+`figures/`, `exports/`, `manifest.sha256`, `manifest.json`, `assets/*.obj`.
+
+## Reproducing
 
 ```bash
-pip install numpy
+python3 -m unittest test_validation -v        # 46 tests
+python3 reproduce.py                          # full protocol (main + sweep + ablations + summary)
+python3 reproduce.py --check                  # compare aggregates against reference.json
+python3 make_figures.py                       # figures + CSV exports
+python3 audit.py --write                      # (re)build the checksum manifest
+python3 audit.py                              # verify every manifest entry bitwise
 ```
 
-## Running
+The protocol is resumable, which matters on constrained machines:
 
 ```bash
-python3 -m unittest test_validation -v     # 24 tests, ~1 s
-python3 reproduce.py --check               # 180 attempts, ~1-3 min
+python3 reproduce.py --stage main
+python3 reproduce.py --stage sweep      --routes sparse,wall
+python3 reproduce.py --stage ablations  --routes urban_a,urban_b
+python3 reproduce.py --stage summarize  --write-reference
 ```
 
-A successful reproduction prints:
+## What the two verification mechanisms mean
 
-```
-All reference values reproduced exactly.
-```
+They are deliberately separate and are **not** the same claim:
 
-Wall-clock runtimes in `summary.json` are machine dependent and are the only
-quantities that legitimately differ between runs. Every geometric and
-proxy-energy value is bit-reproducible under the same NumPy version.
+- `audit.py` performs **bitwise** SHA-256 verification of file content against
+  `manifest.sha256` (947 tracked files in this release).
+- `reproduce.py --check` performs a **numerical** comparison of 243 tracked aggregates
+  against `reference.json` with a tolerance of `1e-9` relative and absolute. On success it
+  prints *"matched the reference values within the specified tolerance … This is a
+  numerical comparison, not a bitwise file comparison."* No claim of bitwise-identical
+  floating-point results across machines is made, and no second-machine records are
+  included in this release.
 
-## Reported aggregates
+## Scene provenance and the UrbanScene3D hook
 
-All 180 attempts were accepted (45 per planner). Planner order below is
-A*, RRT*, distance-objective GA, proxy-objective GA.
+`urban_scenes.ingest_mesh()` accepts any OBJ triangle mesh, including an UrbanScene3D
+export, and records `dataset`, `asset_sha256`, triangle count, voxel size, workspace crop,
+occupied voxel count and box count into the scene provenance. The urban scenes shipped
+here were generated by the deterministic procedural city generator (`dataset =
+procedural_dense_city`) because the execution environment used for the reported runs had
+**no network access** to the dataset archive. Every result therefore states its provenance;
+point `ensure_urban_assets()` at dataset meshes to run the identical protocol on
+UrbanScene3D tiles.
 
-| Quantity | A* | RRT* | Distance GA | Proxy GA |
-| --- | --- | --- | --- | --- |
-| Mean path length (m) | 35.398 | 36.293 | 35.364 | 36.562 |
-| Mean proxy (s) | 19.630 | 20.111 | 19.558 | 18.647 |
+Asset digests (voxel size 1.0 m):
 
-Pooled kinematic maxima across all accepted attempts: 4.9505 m/s speed
-(limit 5), 1.9606 m/s^2 acceleration (limit 2), 1.9802 m/s vertical speed
-(limit 2). Maximum relative difference between 24- and 64-node Gauss-Legendre
-quadrature: 4.18e-16.
+| Scene | SHA-256 (prefix) | Buildings | Boxes |
+| --- | --- | --- | --- |
+| `urban_a` | `0a9045f9…` | 31 | 131 |
+| `urban_b` | `316c7ebd…` | 30 | — |
+| `urban_c` | `48db175d…` | 33 | — |
 
-Mean route-level proxy reduction of the proxy-objective GA: 4.29% against A*
-and 4.02% against the distance-objective GA, averaged over the nine
-scene-route pairs. The reduction is concentrated in the wall scene; in the
-sparse scene every planner returns the same route and the difference is
-exactly zero.
+## Headline results (900 attempts, 899 accepted)
+
+Route-level mean reduction in modelled electrical energy versus A*: **2.273 %**
+(95 % CI [0.300, 5.374]) on development routes, **1.014 %** ([0.488, 1.638]) held-out.
+Versus the minimum-time GA the energy GA gains only **0.049 %** (development) and is
+**0.078 %** worse (held-out), neither significant after Holm correction — i.e. the gain over
+A* is mostly shorter traversal time and fewer enforced stops, not a distinct energy effect.
+
+## Energy semantics
+
+Joule figures come from a parameterised propulsion model (m = 1.5 kg, 4 rotors, R = 0.12 m,
+FM = 0.70, profile 22 W, CdA = 0.06 m², η = 0.85, ancillary 10 W; hover draw 178.36 W).
+They are **model** energies, not measured battery consumption.
+
+## Citation
+
+Cite the specific archived **version DOI** for v0.3.0 alongside the concept DOI
+`10.5281/zenodo.22679145`, which always resolves to the newest version. See `CITATION.cff`.
 
 ## License
 
-MIT. See `LICENSE`. If you use this code, please cite the article; see
-`CITATION.cff`.
+MIT — see `LICENSE`.

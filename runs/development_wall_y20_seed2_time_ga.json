@@ -1,0 +1,348 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      4.0,
+      20.0,
+      4.0
+    ],
+    [
+      20.70335644389683,
+      32.83848557074975,
+      5.630837365766494
+    ],
+    [
+      36.0,
+      20.0,
+      4.0
+    ]
+  ],
+  "segment_durations_s": [
+    8.003091093242425,
+    7.681398970694819
+  ],
+  "length_m": 41.167080802757866,
+  "flight_duration_s": 15.684490063937243,
+  "energy_quotient_m1p5_sminus2": 489.0826408394954,
+  "equivalent_hover_time_s": 15.917642169264168,
+  "model_electrical_energy_j": 2864.3423050635847,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 21135.657694936417,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 182.62259680660316,
+  "decoded_waypoints": 3,
+  "retained_stops": 1,
+  "battery_energy_j": 2864.3423050635847,
+  "planner": "time_ga",
+  "scene": "wall",
+  "route": "wall_y20",
+  "route_set": "development",
+  "seed": 2,
+  "runtime_s": 1.0540679759999847,
+  "scene_kind": "synthetic",
+  "provenance": {
+    "kind": "synthetic_boxes",
+    "source": "hand specified",
+    "route_y": 20.0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 1.9605920988138419,
+  "exact_max_vertical_mps": 0.3980811402295358,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 2.324491368707669e-16,
+  "energy_quadrature_relative_difference": 3.1752304889158083e-16,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": [
+    {
+      "generation": 0,
+      "evaluations": 23,
+      "feasible_count": 13,
+      "best_score": 0.18621087661975416,
+      "best_is_feasible": true,
+      "best_length_m": 49.16458788640375,
+      "best_duration_s": 18.621087661975416,
+      "best_proxy_s": 18.82020761228551,
+      "best_energy_j": 3388.1340920167877
+    },
+    {
+      "generation": 1,
+      "evaluations": 35,
+      "feasible_count": 12,
+      "best_score": 0.18621087661975416,
+      "best_is_feasible": true,
+      "best_length_m": 49.16458788640375,
+      "best_duration_s": 18.621087661975416,
+      "best_proxy_s": 18.82020761228551,
+      "best_energy_j": 3388.1340920167877
+    },
+    {
+      "generation": 2,
+      "evaluations": 44,
+      "feasible_count": 18,
+      "best_score": 0.18621087661975416,
+      "best_is_feasible": true,
+      "best_length_m": 49.16458788640375,
+      "best_duration_s": 18.621087661975416,
+      "best_proxy_s": 18.82020761228551,
+      "best_energy_j": 3388.1340920167877
+    },
+    {
+      "generation": 3,
+      "evaluations": 51,
+      "feasible_count": 15,
+      "best_score": 0.16881938861804666,
+      "best_is_feasible": true,
+      "best_length_m": 44.5727758727516,
+      "best_duration_s": 16.881938861804667,
+      "best_proxy_s": 17.1019676039071,
+      "best_energy_j": 3078.344746049287
+    },
+    {
+      "generation": 4,
+      "evaluations": 61,
+      "feasible_count": 20,
+      "best_score": 0.16881938861804666,
+      "best_is_feasible": true,
+      "best_length_m": 44.5727758727516,
+      "best_duration_s": 16.881938861804667,
+      "best_proxy_s": 17.1019676039071,
+      "best_energy_j": 3078.344746049287
+    },
+    {
+      "generation": 5,
+      "evaluations": 73,
+      "feasible_count": 21,
+      "best_score": 0.16881938861804666,
+      "best_is_feasible": true,
+      "best_length_m": 44.5727758727516,
+      "best_duration_s": 16.881938861804667,
+      "best_proxy_s": 17.1019676039071,
+      "best_energy_j": 3078.344746049287
+    },
+    {
+      "generation": 6,
+      "evaluations": 89,
+      "feasible_count": 18,
+      "best_score": 0.16881938861804666,
+      "best_is_feasible": true,
+      "best_length_m": 44.5727758727516,
+      "best_duration_s": 16.881938861804667,
+      "best_proxy_s": 17.1019676039071,
+      "best_energy_j": 3078.344746049287
+    },
+    {
+      "generation": 7,
+      "evaluations": 103,
+      "feasible_count": 22,
+      "best_score": 0.16881938861804666,
+      "best_is_feasible": true,
+      "best_length_m": 44.5727758727516,
+      "best_duration_s": 16.881938861804667,
+      "best_proxy_s": 17.1019676039071,
+      "best_energy_j": 3078.344746049287
+    },
+    {
+      "generation": 8,
+      "evaluations": 115,
+      "feasible_count": 22,
+      "best_score": 0.16881938861804666,
+      "best_is_feasible": true,
+      "best_length_m": 44.5727758727516,
+      "best_duration_s": 16.881938861804667,
+      "best_proxy_s": 17.1019676039071,
+      "best_energy_j": 3078.344746049287
+    },
+    {
+      "generation": 9,
+      "evaluations": 128,
+      "feasible_count": 20,
+      "best_score": 0.16881938861804666,
+      "best_is_feasible": true,
+      "best_length_m": 44.5727758727516,
+      "best_duration_s": 16.881938861804667,
+      "best_proxy_s": 17.1019676039071,
+      "best_energy_j": 3078.344746049287
+    },
+    {
+      "generation": 10,
+      "evaluations": 145,
+      "feasible_count": 19,
+      "best_score": 0.1676659076943558,
+      "best_is_feasible": true,
+      "best_length_m": 43.80117808694371,
+      "best_duration_s": 16.76659076943558,
+      "best_proxy_s": 16.983770014751848,
+      "best_energy_j": 3056.1576344197965
+    },
+    {
+      "generation": 11,
+      "evaluations": 158,
+      "feasible_count": 23,
+      "best_score": 0.16467260629470762,
+      "best_is_feasible": true,
+      "best_length_m": 43.21361749367195,
+      "best_duration_s": 16.46726062947076,
+      "best_proxy_s": 16.690376846224503,
+      "best_energy_j": 3003.629638171726
+    },
+    {
+      "generation": 12,
+      "evaluations": 172,
+      "feasible_count": 22,
+      "best_score": 0.16467260629470762,
+      "best_is_feasible": true,
+      "best_length_m": 43.21361749367195,
+      "best_duration_s": 16.46726062947076,
+      "best_proxy_s": 16.690376846224503,
+      "best_energy_j": 3003.629638171726
+    },
+    {
+      "generation": 13,
+      "evaluations": 189,
+      "feasible_count": 21,
+      "best_score": 0.16467260629470762,
+      "best_is_feasible": true,
+      "best_length_m": 43.21361749367195,
+      "best_duration_s": 16.46726062947076,
+      "best_proxy_s": 16.690376846224503,
+      "best_energy_j": 3003.629638171726
+    },
+    {
+      "generation": 14,
+      "evaluations": 205,
+      "feasible_count": 20,
+      "best_score": 0.16467260629470762,
+      "best_is_feasible": true,
+      "best_length_m": 43.21361749367195,
+      "best_duration_s": 16.46726062947076,
+      "best_proxy_s": 16.690376846224503,
+      "best_energy_j": 3003.629638171726
+    },
+    {
+      "generation": 15,
+      "evaluations": 219,
+      "feasible_count": 22,
+      "best_score": 0.16467260629470762,
+      "best_is_feasible": true,
+      "best_length_m": 43.21361749367195,
+      "best_duration_s": 16.46726062947076,
+      "best_proxy_s": 16.690376846224503,
+      "best_energy_j": 3003.629638171726
+    },
+    {
+      "generation": 16,
+      "evaluations": 235,
+      "feasible_count": 22,
+      "best_score": 0.16467260629470762,
+      "best_is_feasible": true,
+      "best_length_m": 43.21361749367195,
+      "best_duration_s": 16.46726062947076,
+      "best_proxy_s": 16.690376846224503,
+      "best_energy_j": 3003.629638171726
+    },
+    {
+      "generation": 17,
+      "evaluations": 252,
+      "feasible_count": 22,
+      "best_score": 0.16467260629470762,
+      "best_is_feasible": true,
+      "best_length_m": 43.21361749367195,
+      "best_duration_s": 16.46726062947076,
+      "best_proxy_s": 16.690376846224503,
+      "best_energy_j": 3003.629638171726
+    },
+    {
+      "generation": 18,
+      "evaluations": 271,
+      "feasible_count": 21,
+      "best_score": 0.16467260629470762,
+      "best_is_feasible": true,
+      "best_length_m": 43.21361749367195,
+      "best_duration_s": 16.46726062947076,
+      "best_proxy_s": 16.690376846224503,
+      "best_energy_j": 3003.629638171726
+    },
+    {
+      "generation": 19,
+      "evaluations": 287,
+      "feasible_count": 22,
+      "best_score": 0.1597100630329702,
+      "best_is_feasible": true,
+      "best_length_m": 41.30173575026834,
+      "best_duration_s": 15.97100630329702,
+      "best_proxy_s": 16.193763616622476,
+      "best_energy_j": 2913.0152333132546
+    },
+    {
+      "generation": 20,
+      "evaluations": 304,
+      "feasible_count": 22,
+      "best_score": 0.1597100630329702,
+      "best_is_feasible": true,
+      "best_length_m": 41.30173575026834,
+      "best_duration_s": 15.97100630329702,
+      "best_proxy_s": 16.193763616622476,
+      "best_energy_j": 2913.0152333132546
+    },
+    {
+      "generation": 21,
+      "evaluations": 322,
+      "feasible_count": 24,
+      "best_score": 0.1597100630329702,
+      "best_is_feasible": true,
+      "best_length_m": 41.30173575026834,
+      "best_duration_s": 15.97100630329702,
+      "best_proxy_s": 16.193763616622476,
+      "best_energy_j": 2913.0152333132546
+    },
+    {
+      "generation": 22,
+      "evaluations": 339,
+      "feasible_count": 23,
+      "best_score": 0.1597100630329702,
+      "best_is_feasible": true,
+      "best_length_m": 41.30173575026834,
+      "best_duration_s": 15.97100630329702,
+      "best_proxy_s": 16.193763616622476,
+      "best_energy_j": 2913.0152333132546
+    },
+    {
+      "generation": 23,
+      "evaluations": 357,
+      "feasible_count": 24,
+      "best_score": 0.1597100630329702,
+      "best_is_feasible": true,
+      "best_length_m": 41.30173575026834,
+      "best_duration_s": 15.97100630329702,
+      "best_proxy_s": 16.193763616622476,
+      "best_energy_j": 2913.0152333132546
+    },
+    {
+      "generation": 24,
+      "evaluations": 375,
+      "feasible_count": 21,
+      "best_score": 0.15684490063937243,
+      "best_is_feasible": true,
+      "best_length_m": 41.167080802757866,
+      "best_duration_s": 15.684490063937243,
+      "best_proxy_s": 15.917642169264168,
+      "best_energy_j": 2864.3423050635847
+    },
+    {
+      "generation": 25,
+      "evaluations": 391,
+      "feasible_count": 22,
+      "best_score": 0.15684490063937243,
+      "best_is_feasible": true,
+      "best_length_m": 41.167080802757866,
+      "best_duration_s": 15.684490063937243,
+      "best_proxy_s": 15.917642169264168,
+      "best_energy_j": 2864.3423050635847
+    }
+  ]
+}

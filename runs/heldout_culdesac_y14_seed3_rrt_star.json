@@ -1,0 +1,73 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      10.0,
+      14.0,
+      4.0
+    ],
+    [
+      17.76770531984672,
+      14.311550108883907,
+      16.409380700903604
+    ],
+    [
+      20.471732564207368,
+      12.830403774168643,
+      15.985012651180089
+    ],
+    [
+      30.044973568486164,
+      12.930167689718433,
+      11.01404550132604
+    ],
+    [
+      36.0,
+      14.0,
+      4.0
+    ]
+  ],
+  "segment_durations_s": [
+    11.750132351168102,
+    3.0273191684110596,
+    5.636167675805478,
+    6.641424334068094
+  ],
+  "length_m": 37.8059067315421,
+  "flight_duration_s": 27.055043529452735,
+  "energy_quotient_m1p5_sminus2": 836.2935445679166,
+  "equivalent_hover_time_s": 27.217938808967617,
+  "model_electrical_energy_j": 4861.150644051693,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 19138.849355948307,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 179.67631945443867,
+  "decoded_waypoints": 5,
+  "retained_stops": 3,
+  "battery_energy_j": 4861.150644051693,
+  "planner": "rrt_star",
+  "scene": "culdesac",
+  "route": "culdesac_y14",
+  "route_set": "heldout",
+  "seed": 3,
+  "runtime_s": 0.2060956080000551,
+  "scene_kind": "synthetic",
+  "provenance": {
+    "kind": "synthetic_boxes",
+    "source": "hand specified",
+    "route_y": 14.0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 3.588666101781374,
+  "exact_max_acceleration_mps2": 1.9605920988138417,
+  "exact_max_vertical_mps": 1.9801980198019802,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 1.3594130728386048e-16,
+  "energy_quadrature_relative_difference": 1.87094531391621e-16,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

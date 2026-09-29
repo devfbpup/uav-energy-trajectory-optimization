@@ -1,0 +1,409 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      4.0,
+      4.0,
+      10.0
+    ],
+    [
+      48.0,
+      4.0,
+      10.0
+    ],
+    [
+      60.0,
+      24.0,
+      10.0
+    ],
+    [
+      71.26482579069508,
+      29.75965434785034,
+      11.74864629163517
+    ],
+    [
+      100.0,
+      56.0,
+      10.0
+    ],
+    [
+      104.0,
+      68.0,
+      10.0
+    ],
+    [
+      124.0,
+      80.0,
+      10.0
+    ],
+    [
+      126.4997540694219,
+      98.38820420684391,
+      11.726037361980676
+    ],
+    [
+      148.0,
+      132.0,
+      10.0
+    ],
+    [
+      156.0,
+      156.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    16.665,
+    8.833892120690631,
+    6.132788374223676,
+    14.753388133329613,
+    6.103178302660672,
+    8.833892120690631,
+    7.408310008183011,
+    15.126274496470803,
+    9.581701310310189
+  ],
+  "length_m": 238.8947264512283,
+  "flight_duration_s": 93.43842486655923,
+  "energy_quotient_m1p5_sminus2": 2895.1747824732965,
+  "equivalent_hover_time_s": 94.22611304663107,
+  "model_electrical_energy_j": 16952.643790166203,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 7047.356209833797,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 181.43118116959397,
+  "decoded_waypoints": 10,
+  "retained_stops": 8,
+  "battery_energy_j": 16952.643790166203,
+  "planner": "distance_ga",
+  "scene": "urban_b",
+  "route": "urban_b_r0",
+  "route_set": "development",
+  "seed": 0,
+  "runtime_s": 5.598132913000029,
+  "scene_kind": "urban",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "procedural_dense_city",
+    "asset": "urban_b.obj",
+    "asset_sha256": "316c7ebd5b09ba6631282cd4d7d37282b7b17bc497f266a8df7fb03276add3bc",
+    "triangles": 360,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 46068,
+    "boxes": 123,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "route_set": "development",
+    "route_index": 0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.950495049504951,
+  "exact_max_acceleration_mps2": 1.960592098813842,
+  "exact_max_vertical_mps": 0.5346200776463256,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 1.5707077639643621e-16,
+  "energy_quadrature_relative_difference": 0.0,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": [
+    {
+      "generation": 0,
+      "evaluations": 24,
+      "feasible_count": 7,
+      "best_score": 2.396912317033034,
+      "best_is_feasible": true,
+      "best_length_m": 239.6912317033034,
+      "best_duration_s": 93.38217749414407,
+      "best_proxy_s": 94.18479165381507,
+      "best_energy_j": 16946.146760166946
+    },
+    {
+      "generation": 1,
+      "evaluations": 42,
+      "feasible_count": 11,
+      "best_score": 2.396912317033034,
+      "best_is_feasible": true,
+      "best_length_m": 239.6912317033034,
+      "best_duration_s": 93.38217749414407,
+      "best_proxy_s": 94.18479165381507,
+      "best_energy_j": 16946.146760166946
+    },
+    {
+      "generation": 2,
+      "evaluations": 59,
+      "feasible_count": 13,
+      "best_score": 2.396912317033034,
+      "best_is_feasible": true,
+      "best_length_m": 239.6912317033034,
+      "best_duration_s": 93.38217749414407,
+      "best_proxy_s": 94.18479165381507,
+      "best_energy_j": 16946.146760166946
+    },
+    {
+      "generation": 3,
+      "evaluations": 78,
+      "feasible_count": 13,
+      "best_score": 2.396912317033034,
+      "best_is_feasible": true,
+      "best_length_m": 239.6912317033034,
+      "best_duration_s": 93.38217749414407,
+      "best_proxy_s": 94.18479165381507,
+      "best_energy_j": 16946.146760166946
+    },
+    {
+      "generation": 4,
+      "evaluations": 89,
+      "feasible_count": 17,
+      "best_score": 2.396912317033034,
+      "best_is_feasible": true,
+      "best_length_m": 239.6912317033034,
+      "best_duration_s": 93.38217749414407,
+      "best_proxy_s": 94.18479165381507,
+      "best_energy_j": 16946.146760166946
+    },
+    {
+      "generation": 5,
+      "evaluations": 102,
+      "feasible_count": 18,
+      "best_score": 2.396912317033034,
+      "best_is_feasible": true,
+      "best_length_m": 239.6912317033034,
+      "best_duration_s": 93.38217749414407,
+      "best_proxy_s": 94.18479165381507,
+      "best_energy_j": 16946.146760166946
+    },
+    {
+      "generation": 6,
+      "evaluations": 118,
+      "feasible_count": 13,
+      "best_score": 2.396912317033034,
+      "best_is_feasible": true,
+      "best_length_m": 239.6912317033034,
+      "best_duration_s": 93.38217749414407,
+      "best_proxy_s": 94.18479165381507,
+      "best_energy_j": 16946.146760166946
+    },
+    {
+      "generation": 7,
+      "evaluations": 137,
+      "feasible_count": 13,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 8,
+      "evaluations": 154,
+      "feasible_count": 9,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 9,
+      "evaluations": 170,
+      "feasible_count": 11,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 10,
+      "evaluations": 186,
+      "feasible_count": 14,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 11,
+      "evaluations": 201,
+      "feasible_count": 17,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 12,
+      "evaluations": 214,
+      "feasible_count": 15,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 13,
+      "evaluations": 229,
+      "feasible_count": 14,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 14,
+      "evaluations": 242,
+      "feasible_count": 12,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 15,
+      "evaluations": 255,
+      "feasible_count": 16,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 16,
+      "evaluations": 271,
+      "feasible_count": 17,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 17,
+      "evaluations": 286,
+      "feasible_count": 14,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 18,
+      "evaluations": 299,
+      "feasible_count": 11,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 19,
+      "evaluations": 316,
+      "feasible_count": 13,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 20,
+      "evaluations": 329,
+      "feasible_count": 14,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 21,
+      "evaluations": 341,
+      "feasible_count": 14,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 22,
+      "evaluations": 354,
+      "feasible_count": 14,
+      "best_score": 2.3958654711738006,
+      "best_is_feasible": true,
+      "best_length_m": 239.58654711738004,
+      "best_duration_s": 94.15520965807163,
+      "best_proxy_s": 94.93034936357606,
+      "best_energy_j": 17077.619192661157
+    },
+    {
+      "generation": 23,
+      "evaluations": 370,
+      "feasible_count": 13,
+      "best_score": 2.388947264512283,
+      "best_is_feasible": true,
+      "best_length_m": 238.8947264512283,
+      "best_duration_s": 93.43842486655923,
+      "best_proxy_s": 94.22611304663107,
+      "best_energy_j": 16952.643790166203
+    },
+    {
+      "generation": 24,
+      "evaluations": 385,
+      "feasible_count": 14,
+      "best_score": 2.388947264512283,
+      "best_is_feasible": true,
+      "best_length_m": 238.8947264512283,
+      "best_duration_s": 93.43842486655923,
+      "best_proxy_s": 94.22611304663107,
+      "best_energy_j": 16952.643790166203
+    },
+    {
+      "generation": 25,
+      "evaluations": 402,
+      "feasible_count": 15,
+      "best_score": 2.388947264512283,
+      "best_is_feasible": true,
+      "best_length_m": 238.8947264512283,
+      "best_duration_s": 93.43842486655923,
+      "best_proxy_s": 94.22611304663107,
+      "best_energy_j": 16952.643790166203
+    }
+  ]
+}

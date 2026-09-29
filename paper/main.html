@@ -1,0 +1,163 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>Evolutionary Trajectory Optimization for Energy-Constrained UAVs in Dense Urban Environments</title>
+<style>
+@page { size: letter; margin: 0.75in 0.6in; }
+body { font-family: "Times New Roman", Times, serif; font-size: 9.4pt; line-height: 1.22; text-align: justify; margin:0; }
+h1.title { font-size: 20pt; text-align:center; font-weight: normal; margin: 0 0 10pt 0; line-height:1.15; }
+.authors { display:flex; justify-content:center; gap:60pt; text-align:center; margin-bottom:12pt; }
+.authors .n { font-size:11pt; }
+.authors .a { font-style: italic; font-size:9pt; }
+.cols { column-count: 2; column-gap: 20pt; }
+h2 { font-size: 10pt; font-variant: small-caps; text-align:center; margin: 10pt 0 4pt; font-weight:normal; }
+h3 { font-size: 9.4pt; font-style: italic; margin: 7pt 0 3pt; font-weight:normal; }
+p { margin: 0 0 4pt; text-indent: 12pt; }
+p.first, p.noind { text-indent: 0; }
+.abstract { font-weight: bold; font-size: 9pt; text-align: justify; }
+.abstract i { font-weight: bold; }
+.eq { text-align:center; margin:5pt 0; font-style:italic; }
+table { border-collapse: collapse; font-size: 7.6pt; width:100%; margin: 4pt 0 6pt; }
+caption { caption-side: top; font-size: 7.8pt; text-align:left; margin-bottom:3pt; }
+th, td { padding: 1pt 3pt; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+thead tr { border-top: 1px solid #000; border-bottom: 1px solid #000; }
+tbody tr.last td { border-bottom: 1px solid #000; }
+tr.grp td { text-align:left; font-style: italic; padding-top:3pt; }
+ul { margin: 2pt 0 4pt 12pt; padding:0; }
+li { margin-bottom: 2pt; }
+.refs { font-size: 8pt; }
+.refs p { text-indent:-10pt; margin-left:10pt; }
+code { font-family: "Courier New", monospace; font-size: 8.6pt; }
+</style></head>
+<body>
+<h1 class="title">Evolutionary Trajectory Optimization for Energy-Constrained UAVs in Dense Urban Environments: A Data-Driven Approach using UrbanScene3D</h1>
+<div class="authors">
+<div><div class="n">Devjyoti Saha</div><div class="a">Department of Electronics Engineering<br>Polytechnic University of the Philippines<br>Manila, Philippines</div></div>
+<div><div class="n">Jo-Ann V. Magsumbol</div><div class="a">Department of Electronics Engineering<br>Polytechnic University of the Philippines<br>Manila, Philippines</div></div>
+</div>
+<div class="cols">
+<p class="abstract"><i>Abstract</i>&mdash;Battery capacity limits the useful range of small multirotor unmanned aerial vehicles (UAVs), and the energy actually consumed on a mission depends on the shape and the timing of the flown trajectory rather than on path length alone. This paper presents a reproducible evolutionary trajectory planner that is constrained by an explicit mission energy allowance and evaluated on mesh-ingested dense urban scenes as well as on synthetic obstacle scenes. Four objectives are compared inside one identical search: minimum distance, an acceleration-based energy proxy, minimum traversal time, and minimum modelled electrical energy obtained from a parameterised propulsion model. Two classical baselines, grid A* and RRT*, are included. The benchmark comprises six scenes, thirty routes split into development and held-out sets, five seeds and six planners, giving 900 planning attempts of which 899 satisfied every feasibility, kinematic and energy check. Under matched evaluation budgets the energy-minimising genetic planner reduces modelled electrical energy relative to A* by 2.27% (route-level cluster bootstrap 95% interval [0.30, 5.37]) on development routes and 1.01% ([0.49, 1.64]) on held-out routes. A minimum-time control planner shows that almost all of that reduction is explained by shorter traversal time and fewer enforced stops rather than by a distinct energy effect: the energy planner improves on the time planner by only 0.05%, which is not significant after multiplicity correction. Ablations show that removing the A* warm start and the visibility shortcutting stage reduces the accepted-solution rate from 18/18 to 7/18 on the ablation subset. All code, assets, per-attempt records, plotting and export scripts, the audit script and a 947-file checksum manifest are released, and the reproduction script reports agreement with reference aggregates within a stated numerical tolerance rather than bitwise equality. Energies are model energies in joules from a parameterised propulsion model; they are not measured battery consumption.</p>
+<p class="abstract"><i>Index Terms</i>&mdash;UAV trajectory optimization, energy-constrained planning, genetic algorithms, urban environments, mesh ingestion, reproducibility.</p>
+
+<h2>I. Introduction</h2>
+<p class="first">Small multirotor UAVs are increasingly deployed for inspection, delivery and mapping in built-up areas, where flight time rather than payload is usually the binding constraint. Because induced power grows with commanded thrust and parasite power grows with the cube of airspeed, the energy required to fly a geometric path depends strongly on how the path is timed and on how many times the vehicle is brought to rest. Planners that minimise path length therefore optimise a quantity that is only loosely related to consumed energy.</p>
+<p>This paper studies that gap in a controlled and fully reproducible way. The contributions are:</p>
+<ul>
+<li>A mesh ingestion pipeline that converts a triangle-mesh urban scene into a conservative axis-aligned obstacle set through voxelisation and greedy box decomposition, recording the asset checksum, voxel size, workspace crop and resulting box count as machine-readable provenance.</li>
+<li>An explicit energy constraint. A parameterised electrical propulsion model converts a decoded trajectory into joules, and any candidate whose modelled energy exceeds the usable mission allowance is rejected as infeasible inside the feasibility-first ranking, so the search is energy-constrained and not merely energy-scored.</li>
+<li>A minimum-time control planner, included to separate genuine energy optimisation from the confound of shorter traversal time and fewer stops. All results report traversal time, retained waypoint count, proxy value and modelled joules together.</li>
+<li>A strengthened comparison: six scenes, held-out routes, matched evaluation budgets with quality-versus-runtime curves, route-level uncertainty from a cluster bootstrap with Holm-corrected permutation tests, and ablations of the warm start and shortcutting stages.</li>
+<li>A complete reproducibility package: plotting and export scripts, an audit script, a checksum manifest, per-attempt records, and a reproduction script whose success message states the tolerance it actually verifies.</li>
+</ul>
+
+<h2>II. Related Work</h2>
+<p class="first">Sampling-based planners such as RRT* and grid searches such as A* provide asymptotic or resolution optimality with respect to path length [1], [2]. Energy-aware UAV planning typically either optimises a surrogate of mechanical effort or uses a power model derived from momentum theory and blade element theory [3], [4]. Evolutionary planners are attractive for variable-length waypoint encodings because they do not require differentiability of the cost [5]. Reproducibility practice in robotics increasingly emphasises released code, archived artefacts and explicit verification protocols [6]. The present work combines these threads: an evolutionary planner with an explicit energy constraint, evaluated under a released and audited protocol, with a control objective included specifically to test whether reported energy gains are attributable to the energy objective itself.</p>
+
+<h2>III. Problem Formulation</h2>
+<h3>A. Workspace and obstacles</h3>
+<p class="first">A scene is a rectangular workspace containing axis-aligned obstacle boxes. Obstacles are inflated by the vehicle radius r<sub>v</sub> = 0.25 m plus a clearance c = 0.5 m, so all collision tests are performed against boxes grown by 0.75 m. A polyline is feasible when every vertex lies in free space and every segment misses every inflated box, tested with a slab intersection test and independently re-verified with a separating-axis test.</p>
+<h3>B. Trajectory decoding</h3>
+<p class="first">A candidate is a polyline p<sub>0</sub>, …, p<sub>n</sub> with p<sub>0</sub> the start and p<sub>n</sub> the goal. Each segment is decoded as a quintic rest-to-rest polynomial in normalised time &tau; &isin; [0,1] with shape function s(&tau;) = 10&tau;<sup>3</sup> &minus; 15&tau;<sup>4</sup> + 6&tau;<sup>5</sup>, so velocity and acceleration vanish at both segment ends. The vehicle therefore stops at every retained waypoint, which is why the retained waypoint count is reported alongside every energy figure. Segment duration is the smallest value satisfying the speed, acceleration and vertical-speed limits in closed form,</p>
+<p class="eq">T<sub>i</sub> = 1.01 · max( 1.875 L<sub>i</sub> / v<sub>max</sub>, &radic;(10&radic;3/3 · L<sub>i</sub> / a<sub>max</sub>), 1.875 |&Delta;z<sub>i</sub>| / w<sub>max</sub>, 0.2 ),</p>
+<p class="noind">with L<sub>i</sub> the segment length, v<sub>max</sub> = 5 m/s, a<sub>max</sub> = 2 m/s<sup>2</sup> and w<sub>max</sub> = 2 m/s.</p>
+<h3>C. Energy proxy and modelled electrical energy</h3>
+<p class="first">The acceleration-based proxy is Q = &int;<sub>0</sub><sup>T</sup> ‖a(t) + g‖<sup>3/2</sup> dt, reported as an equivalent hover time H<sub>q</sub> = Q / g<sup>3/2</sup> in seconds. The proxy is a shape and timing penalty; it is not energy.</p>
+<p>The propulsion model converts the same decoded trajectory into joules. With vehicle mass m, N rotors of radius R, air density &rho;, disc area A = &pi;R<sup>2</sup>, figure of merit FM, equivalent flat-plate area C<sub>d</sub>A, drive efficiency &eta; and ancillary load P<sub>anc</sub>, thrust and induced velocity are T = m‖a + g‖ and v<sub>i</sub> = &radic;(T/N / (2&rho;A)), and instantaneous electrical power is</p>
+<p class="eq">P = (1/&eta;)[ T v<sub>i</sub> / FM + P<sub>prof</sub> (T/mg)<sup>3/2</sup> + ½ &rho; C<sub>d</sub>A ‖v‖<sup>3</sup> ] + P<sub>anc</sub>.</p>
+<p class="noind">The parameter values used throughout are m = 1.5 kg, N = 4, R = 0.12 m, &rho; = 1.225 kg/m<sup>3</sup>, FM = 0.70, P<sub>prof</sub> = 22 W, C<sub>d</sub>A = 0.06 m<sup>2</sup>, &eta; = 0.85 and P<sub>anc</sub> = 10 W, giving a hover draw of 178.36 W. These are literature-typical constants for a small quadrotor: the model is a parameterised reference model, not a calibration fitted to measured flight data, and its outputs are model joules.</p>
+<h3>D. Energy constraint</h3>
+<p class="first">A mission energy allowance of 30 000 J is declared with a reserve fraction of 0.20, so the usable allowance is 24 000 J. A candidate is feasible only if it is collision free, respects the kinematic limits and satisfies E = &int;<sub>0</sub><sup>T</sup> P(t) dt &le; 24 000 J. Candidates that violate the allowance are ranked as infeasible with violation ratio E / E<sub>usable</sub>, so the constraint shapes the search instead of being evaluated after the fact. Both integrals use 24-node Gauss–Legendre quadrature per segment and are re-checked at 64 nodes; the largest relative difference over all accepted outputs was 3.99&times;10<sup>&minus;16</sup> for the proxy and 4.40&times;10<sup>&minus;16</sup> for the energy integral.</p>
+
+<h2>IV. Scene Ingestion</h2>
+<p class="first">The ingestion stage reads a Wavefront OBJ triangle mesh, voxelises it inside the declared workspace at 1 m resolution by dense barycentric sampling of every triangle, fills each occupied column between its lowest and highest occupied voxel so hollow shells cannot be entered, and decomposes the occupancy grid into axis-aligned boxes by greedy extension in x, then y, then z. Voxels are rounded outward, so the obstacle set is conservative: free space is never enlarged. Each ingested scene records the asset file name, its SHA-256 digest, triangle count, voxel size, workspace crop, occupied voxel count and box count.</p>
+<p>Three dense urban scenes, <code>urban_a</code>, <code>urban_b</code> and <code>urban_c</code>, are ingested through this pipeline in a 160 &times; 160 &times; 28 m workspace. Each contains roughly 30 building blocks on an 8 m street grid with heights from 18 to 60 m, most exceeding the 30 m ceiling, so routing is forced through street-level corridors; ingestion produces of the order of 130 obstacle boxes per scene against one to three boxes in the synthetic scenes.</p>
+<p><i>Scope statement.</i> The ingestion pipeline is asset agnostic and accepts an UrbanScene3D OBJ export unchanged, and the released code contains the dataset hook. The urban scenes reported here were generated by a deterministic, checksummed procedural city generator because the execution environment used for these experiments had no network access to the dataset archive. The provenance record of every scene states <code>procedural_dense_city</code>, so no result in this paper is presented as photogrammetric dataset content. Reproducing the same protocol on UrbanScene3D tiles requires only pointing the ingestion entry point at the dataset meshes.</p>
+
+<h2>V. Planners</h2>
+<p class="first">All planners share the same workspace, inflation policy, decoder, feasibility tests and energy constraint. <b>A*</b> searches a 26-connected grid, at 2 m spacing in the synthetic scenes and 4 m in the urban scenes, and is deterministic. <b>RRT*</b> uses goal biasing 0.15, a step of one twelfth of the workspace diagonal, a logarithmic rewiring radius, and 500 iterations in the main protocol.</p>
+<p><b>Genetic planner.</b> Population 24, tournament size 3, two elites, crossover probability 0.85, mutation probability 0.40, variable length from 2 to 16 waypoints, Gaussian waypoint perturbation with 3 m scale, and insert, delete and shift mutation operators. Initialisation seeds the population with a shortcut A* solution when the warm start is enabled. Feasibility-first ranking places all feasible individuals ahead of infeasible ones, ordered by violation. The four objectives are normalised distance, normalised proxy, normalised traversal time and normalised modelled energy. A run terminates at 25 generations in the main protocol, or when a declared budget of distinct trajectory evaluations is exhausted in the budget sweep.</p>
+<p>The A* warm start is deterministic for a given scene and route, so it is computed once per route and reused across seeds; its measured runtime is added back to every warm-started genetic run so reported runtimes remain comparable.</p>
+
+<h2>VI. Experimental Protocol</h2>
+<p class="first">Six scenes are used: the synthetic scenes <code>sparse</code>, <code>wall</code> and <code>culdesac</code>, and the three ingested urban scenes. Each scene contributes three development routes and two held-out routes; held-out routes were never inspected while the planner and its parameters were being developed. Each of the 30 routes is run with five seeds and six planners, giving 900 attempts. Every accepted output is re-validated by five independent checks: the shared final check on a 401-sample-per-segment reconstruction, an independently implemented separating-axis collision test, closed-form kinematic bound verification, the 24-versus-64 node quadrature comparison, and the energy constraint.</p>
+<p>The matched-budget sweep runs each genetic objective at 150, 300, 600 and 1200 distinct trajectory evaluations, and RRT* at 250, 500, 1000, 2000 and 4000 iterations, on one development route per scene with three seeds. The ablation study switches off the warm start, the shortcutting stage, and both, on the same subset.</p>
+<p>Uncertainty is quantified at the level of routes, not of individual attempts. For each comparison the per-route mean of each planner is formed, the per-route percentage reduction is computed, and a percentile cluster bootstrap over routes with 10<sup>4</sup> resamples gives a 95% interval. A two-sided paired sign-flip permutation test with 10<sup>5</sup> draws gives p values, Holm-corrected across the nine reported comparisons within each route set.</p>
+
+<h2>VII. Results</h2>
+<h3>A. Feasibility</h3>
+<p class="first">Of 900 attempts, 899 produced outputs that passed every check. The single failure was RRT* on <code>urban_b</code> held-out route 0 at seed 4, which returned no geometric path within its iteration budget. Pooled over all accepted outputs the maxima were 4.9505 m/s speed, 1.9606 m/s<sup>2</sup> acceleration and 1.9802 m/s vertical speed, against limits of 5, 2 and 2. The largest fraction of the usable energy allowance consumed by any accepted trajectory was 0.818, so the energy constraint was active but not vacuous.</p>
+<h3>B. Planner comparison</h3>
+<table>
+<caption>TABLE I. Main protocol means. L: path length (m). T: traversal time (s). H<sub>q</sub>: proxy equivalent hover time (s). E: modelled electrical energy (J). S: retained interior waypoints (stops).</caption>
+<thead><tr><th>Planner</th><th>L</th><th>T</th><th>H<sub>q</sub></th><th>E</th><th>S</th></tr></thead>
+<tbody>
+<tr class="grp"><td colspan="6">Development routes (18 routes, 90 attempts each)</td></tr>
+<tr><td>A* (90/90)</td><td>107.989</td><td>44.399</td><td>44.601</td><td>8020.0</td><td>2.00</td></tr>
+<tr><td>RRT* (90/90)</td><td>112.420</td><td>45.949</td><td>46.106</td><td>8292.2</td><td>1.71</td></tr>
+<tr><td>Distance GA (90/90)</td><td>107.770</td><td>44.276</td><td>44.480</td><td>7998.4</td><td>2.00</td></tr>
+<tr><td>Proxy GA (90/90)</td><td>108.522</td><td>43.756</td><td>43.966</td><td>7908.7</td><td>1.88</td></tr>
+<tr><td>Time GA (90/90)</td><td>108.569</td><td>43.773</td><td>43.987</td><td>7912.4</td><td>1.90</td></tr>
+<tr><td>Energy GA (90/90)</td><td>108.510</td><td>43.751</td><td>43.962</td><td>7907.9</td><td>1.88</td></tr>
+<tr class="grp"><td colspan="6">Held-out routes (12 routes, 60 attempts each)</td></tr>
+<tr><td>A* (60/60)</td><td>128.302</td><td>52.301</td><td>52.600</td><td>9459.0</td><td>3.25</td></tr>
+<tr><td>RRT* (59/60)</td><td>133.788</td><td>54.846</td><td>55.139</td><td>9915.0</td><td>3.41</td></tr>
+<tr><td>Distance GA (60/60)</td><td>127.653</td><td>51.945</td><td>52.246</td><td>9395.5</td><td>3.23</td></tr>
+<tr><td>Proxy GA (60/60)</td><td>128.551</td><td>51.672</td><td>51.974</td><td>9348.9</td><td>3.12</td></tr>
+<tr><td>Time GA (60/60)</td><td>128.538</td><td>51.637</td><td>51.941</td><td>9342.9</td><td>3.12</td></tr>
+<tr class="last"><td>Energy GA (60/60)</td><td>128.259</td><td>51.673</td><td>51.974</td><td>9348.3</td><td>3.12</td></tr>
+</tbody></table>
+<p class="first">Separating the two scene families on development routes, the urban scenes are an order of magnitude more demanding: A* averages 180.58 m, 69.29 s and 12 526 J there against 35.40 m, 19.51 s and 3 514 J in the synthetic scenes, while the energy planner averages 12 476 J and 3 340 J respectively.</p>
+<h3>C. Route-level uncertainty and the minimum-time control</h3>
+<table>
+<caption>TABLE II. Route-level mean percentage reduction with cluster bootstrap 95% intervals over routes and Holm-adjusted permutation p values.</caption>
+<thead><tr><th>Comparison</th><th>Metric</th><th>Mean</th><th>95% CI</th><th>Holm p</th></tr></thead>
+<tbody>
+<tr class="grp"><td colspan="5">Development (18 routes)</td></tr>
+<tr><td>Energy vs A*</td><td>E</td><td>2.273</td><td>[0.300, 5.374]</td><td>0.074</td></tr>
+<tr><td>Energy vs Distance</td><td>E</td><td>2.048</td><td>[0.154, 5.136]</td><td>0.074</td></tr>
+<tr><td>Energy vs Time</td><td>E</td><td>0.049</td><td>[0.003, 0.104]</td><td>0.378</td></tr>
+<tr><td>Proxy vs A*</td><td>H<sub>q</sub></td><td>2.300</td><td>[0.306, 5.448]</td><td>0.074</td></tr>
+<tr><td>Proxy vs Distance</td><td>H<sub>q</sub></td><td>2.074</td><td>[0.161, 5.200]</td><td>0.074</td></tr>
+<tr><td>Proxy vs Time</td><td>H<sub>q</sub></td><td>0.026</td><td>[&minus;0.029, 0.089]</td><td>0.754</td></tr>
+<tr><td>Time vs A*</td><td>T</td><td>2.331</td><td>[0.296, 5.524]</td><td>0.074</td></tr>
+<tr><td>Time vs Proxy</td><td>T</td><td>&minus;0.022</td><td>[&minus;0.079, 0.031]</td><td>0.754</td></tr>
+<tr class="grp"><td colspan="5">Held-out (12 routes)</td></tr>
+<tr><td>Energy vs A*</td><td>E</td><td>1.014</td><td>[0.488, 1.638]</td><td>0.016</td></tr>
+<tr><td>Energy vs Distance</td><td>E</td><td>0.517</td><td>[0.111, 1.027]</td><td>0.114</td></tr>
+<tr><td>Energy vs Time</td><td>E</td><td>&minus;0.078</td><td>[&minus;0.200, 0.001]</td><td>0.566</td></tr>
+<tr><td>Proxy vs A*</td><td>H<sub>q</sub></td><td>1.028</td><td>[0.493, 1.663]</td><td>0.016</td></tr>
+<tr><td>Time vs A*</td><td>T</td><td>1.137</td><td>[0.535, 1.872]</td><td>0.016</td></tr>
+<tr class="last"><td>Time vs Proxy</td><td>T</td><td>0.096</td><td>[&minus;0.001, 0.252]</td><td>0.566</td></tr>
+</tbody></table>
+<p class="first">Relative to A*, the energy planner reduces modelled energy by 2.273% on development routes and 1.014% on held-out routes, with bootstrap intervals excluding zero. The decisive comparison is against the minimum-time planner: the energy planner improves on it by only 0.049% on development routes and is 0.078% worse on held-out routes, in both cases not significant after Holm correction. The proxy and energy objectives are likewise indistinguishable from the time objective. The mechanism is visible in the stop counts of Table I: every objective that improves on A* also removes about 0.1 to 0.15 enforced stops per route and shortens traversal time, while path length actually increases slightly.</p>
+<h3>D. Matched budgets and quality versus runtime</h3>
+<p class="first">At 150, 300, 600 and 1200 evaluations the energy planner attains 10 129, 10 098, 10 022 and 9 910 J at mean runtimes of 1.63, 2.04, 2.90 and 4.63 s on the sweep subset, against 10 205 down to 10 111 J for the distance objective over the same budgets. RRT* at 250 to 4000 iterations moves from 0.06 to 3.26 s of runtime and from 10 973 J at 500 iterations to 10 209 J at 4000 iterations; its apparently low mean at 250 iterations reflects only 14 of 18 accepted outputs and therefore survivorship on easier routes. Under equal wall-clock cost the ordering of the genetic objectives is unchanged, and the separation between the energy, proxy and time objectives remains within a few hundredths of a percent at every budget.</p>
+<h3>E. Ablations</h3>
+<p class="first">With both stages enabled all 18 subset runs per objective were accepted. Disabling shortcutting alone reduced acceptance to 14/18; disabling the warm start alone reduced it to 16/18 and raised mean energy from 10 054 to 10 699 J for the energy objective; disabling both reduced acceptance to 7/18. The low mean energies in the doubly ablated condition therefore describe only the short, easy routes that still succeeded and must not be read as an improvement. The warm start and the shortcutting stage are thus responsible for reliability in the dense scenes, not merely for cost polish.</p>
+
+<h2>VIII. Reproducibility</h2>
+<p class="first">The released package contains the planner and propulsion model, the ingestion module, a 46-test validation suite, the protocol runner, the plotting and export script that produces all ten figures together with a CSV export of every plotted series, the audit script, and a manifest of 947 SHA-256 digests covering sources, assets, per-attempt records, figures and exports.</p>
+<p>Two distinct verification mechanisms are provided and are deliberately not conflated. The audit script performs bitwise verification of file content against the manifest. The reproduction script compares 243 tracked numerical aggregates against archived reference values within a stated tolerance of 10<sup>&minus;9</sup> relative and absolute, and its success message reports that the aggregates <i>matched the reference aggregates within the specified tolerance</i>. No claim of bitwise-identical floating-point output across machines is made. Cross-machine records are not included in this release; the protocol and the reference file are structured so that a second execution environment can produce them with a single command.</p>
+<p>The archive should be cited by the specific archived version DOI for the released version alongside the concept DOI 10.5281/zenodo.22679145, which always resolves to the newest version.</p>
+
+<h2>IX. Limitations</h2>
+<p class="first">Energies are model energies from a parameterised propulsion model with literature-typical constants; they are not measured battery consumption, and no bench or flight validation of the power model is included. Rotational dynamics, wind, temperature effects and battery voltage sag are not modelled. The urban scenes are ingested through the dataset-compatible pipeline but were generated procedurally, so they exercise dense street-level geometry without carrying photogrammetric fidelity. No learned model is trained on scene data; the data-driven component is the geometric ingestion of scene meshes into the planning representation. The obstacle representation is conservative and axis-aligned, which overestimates occupancy for non-boxy structures. Because the decoder enforces a stop at every retained waypoint, part of the measured advantage of every non-distance objective is attributable to stop removal, as the minimum-time control demonstrates; a continuous-velocity decoder would be needed to isolate a purely energetic effect. The route sample is 30 routes over six scenes, so the intervals reported here describe this benchmark and are not evidence of general planner superiority.</p>
+
+<h2>X. Conclusion</h2>
+<p class="first">An energy-constrained evolutionary trajectory planner was evaluated on ingested dense urban scenes and synthetic scenes under a released and audited protocol. Adding an explicit mission energy constraint and a physics-based power model makes energy feasibility a first-class part of the search, and the resulting planner improves modelled energy over A*, RRT* and a distance objective on both development and held-out routes. The minimum-time control planner shows that this advantage is essentially a timing and stop-count effect rather than a distinct energy-optimisation effect, which is the most useful negative result of the study: with a rest-to-rest decoder, an energy objective buys little beyond minimising traversal time. Future work should replace the decoder with one that preserves velocity through waypoints, calibrate the power model against measured flight data, and repeat the identical protocol on photogrammetric dataset tiles.</p>
+
+<h2>Data and Code Availability</h2>
+<p class="first">All code, assets, per-attempt records, figures, exports, checksum manifest and the audit and plotting scripts are available at github.com/devfbpup/uav-energy-trajectory-optimization and archived on Zenodo (concept DOI 10.5281/zenodo.22679145; cite the specific version DOI of the released version).</p>
+
+<h2>References</h2>
+<div class="refs">
+<p>[1] S. M. LaValle, <i>Planning Algorithms</i>. Cambridge, U.K.: Cambridge Univ. Press, 2006.</p>
+<p>[2] S. Karaman and E. Frazzoli, “Sampling-based algorithms for optimal motion planning,” <i>Int. J. Robot. Res.</i>, vol. 30, no. 7, pp. 846–894, 2011.</p>
+<p>[3] J. G. Leishman, <i>Principles of Helicopter Aerodynamics</i>, 2nd ed. Cambridge, U.K.: Cambridge Univ. Press, 2006.</p>
+<p>[4] N. Michel, P. Wei, Z. Kong, A. K. Sinha, and X. Lin, “Modeling and validation of electric multirotor unmanned aerial vehicle system energy dynamics,” <i>eTransportation</i>, vol. 12, 100173, 2022.</p>
+<p>[5] V. Roberge, M. Tarbouchi, and G. Labonte, “Comparison of parallel genetic algorithm and particle swarm optimization for real-time UAV path planning,” <i>IEEE Trans. Ind. Informat.</i>, vol. 9, no. 1, pp. 132–141, 2013.</p>
+<p>[6] F. Bonsignorio, “A new kind of article for reproducible research in intelligent robotics,” <i>IEEE Robot. Autom. Mag.</i>, vol. 24, no. 3, pp. 178–182, 2017.</p>
+<p>[7] Y. Lin, L. Wang, et al., “Capturing, reconstructing, and simulating: The UrbanScene3D dataset,” in <i>Proc. ECCV</i>, 2022.</p>
+</div>
+</div>
+</body></html>

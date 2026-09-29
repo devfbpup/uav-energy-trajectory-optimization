@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      76.0,
+      4.0,
+      10.0
+    ],
+    [
+      76.0,
+      156.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    57.57
+  ],
+  "length_m": 152.0,
+  "flight_duration_s": 57.57,
+  "energy_quotient_m1p5_sminus2": 1769.3826011560413,
+  "equivalent_hover_time_s": 57.58617614679678,
+  "model_electrical_energy_j": 10374.023343494713,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 13625.976656505287,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.19842528217325,
+  "decoded_waypoints": 2,
+  "retained_stops": 0,
+  "battery_energy_j": 10374.023343494713,
+  "planner": "rrt_star",
+  "scene": "urban_c",
+  "route": "urban_c_r2",
+  "route_set": "development",
+  "seed": 1,
+  "runtime_s": 0.26136423100001593,
+  "scene_kind": "urban",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "procedural_dense_city",
+    "asset": "urban_c.obj",
+    "asset_sha256": "48db175db5a54da88a76ebf1f6f4c70a7283aebc7e405851a19375e560a49b87",
+    "triangles": 396,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 48816,
+    "boxes": 141,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "route_set": "development",
+    "route_index": 2
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 0.2647832458529181,
+  "exact_max_vertical_mps": 0.0,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 0.0,
+  "energy_quadrature_relative_difference": 1.7534078566407875e-16,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}
