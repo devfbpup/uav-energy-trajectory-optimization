@@ -46,8 +46,15 @@ TRACKED_FILES = [
     "records.json",
     "budget_sweep.json",
     "ablations.json",
+    # v0.4.0 UrbanScene3D stage (scripts and results only; no dataset meshes)
+    "urbanscene3d_prep.py",
+    "urbanscene3d_scenes.py",
+    "reproduce_urbanscene3d.py",
+    "make_figures_urbanscene3d.py",
+    "test_urbanscene3d.py",
+    ".gitignore",
 ]
-TRACKED_DIRS = ["assets", "runs", "figures", "exports"]
+TRACKED_DIRS = ["assets", "runs", "figures", "exports", "urbanscene3d", "v040"]
 
 
 def sha256_of(path):

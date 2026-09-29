@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software or benchmark, please cite the concept DOI 10.5281/zenodo.22679145, which always resolves to the newest archived version, or the version DOI shown on that Zenodo record."
 title: "Evolutionary Trajectory Optimization for Energy-Constrained UAVs in Dense Urban Environments: reproducible benchmark code"
-version: 0.3.0
-date-released: 2026-09-10
+version: 0.4.0
+date-released: 2026-09-30
 type: software
 license: MIT
 repository-code: "https://github.com/devfbpup/uav-energy-trajectory-optimization"

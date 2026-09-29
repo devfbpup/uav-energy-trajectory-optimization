@@ -1,0 +1,1051 @@
+{
+  "version": "0.4.0",
+  "attempts": 450,
+  "accepted": 384,
+  "energy_model": "parameterised electrical propulsion model (not fitted to measured flight data)",
+  "mission_usable_energy_j": 24000.0,
+  "hover_power_w": 178.36245373446835,
+  "by_planner": {
+    "development": {
+      "astar": {
+        "attempts": 45,
+        "accepted": 45,
+        "mean_runtime_s": 9.019158212223878,
+        "mean_length_m": 214.32767797372003,
+        "mean_duration_s": 91.23974422612505,
+        "mean_proxy_s": 91.68230007076913,
+        "mean_energy_j": 16477.06378010183,
+        "mean_decoded_waypoints": 8.333333333333334,
+        "mean_retained_stops": 6.333333333333333
+      },
+      "rrt_star": {
+        "attempts": 45,
+        "accepted": 6,
+        "mean_runtime_s": 0.3539481249781804,
+        "mean_length_m": 180.42349491618558,
+        "mean_duration_s": 72.57579901075525,
+        "mean_proxy_s": 72.77299991584876,
+        "mean_energy_j": 13093.558885710036,
+        "mean_decoded_waypoints": 4.833333333333333,
+        "mean_retained_stops": 2.8333333333333335
+      },
+      "distance_ga": {
+        "attempts": 45,
+        "accepted": 45,
+        "mean_runtime_s": 17.117334160135297,
+        "mean_length_m": 212.89637022688802,
+        "mean_duration_s": 89.93054015339338,
+        "mean_proxy_s": 90.35130841415993,
+        "mean_energy_j": 16240.489722607106,
+        "mean_decoded_waypoints": 8.044444444444444,
+        "mean_retained_stops": 6.044444444444444
+      },
+      "proxy_ga": {
+        "attempts": 45,
+        "accepted": 45,
+        "mean_runtime_s": 16.832480322667752,
+        "mean_length_m": 213.90959741084293,
+        "mean_duration_s": 89.14877215927592,
+        "mean_proxy_s": 89.53243775729766,
+        "mean_energy_j": 16097.576261167222,
+        "mean_decoded_waypoints": 7.533333333333333,
+        "mean_retained_stops": 5.533333333333333
+      },
+      "time_ga": {
+        "attempts": 45,
+        "accepted": 45,
+        "mean_runtime_s": 16.837937326424516,
+        "mean_length_m": 213.89600865710997,
+        "mean_duration_s": 89.18038955343565,
+        "mean_proxy_s": 89.56571929396353,
+        "mean_energy_j": 16103.443792221511,
+        "mean_decoded_waypoints": 7.555555555555555,
+        "mean_retained_stops": 5.555555555555555
+      },
+      "energy_ga": {
+        "attempts": 45,
+        "accepted": 45,
+        "mean_runtime_s": 16.833593057690692,
+        "mean_length_m": 213.90155329254253,
+        "mean_duration_s": 89.15462796478477,
+        "mean_proxy_s": 89.5384085694327,
+        "mean_energy_j": 16098.604708357454,
+        "mean_decoded_waypoints": 7.533333333333333,
+        "mean_retained_stops": 5.533333333333333
+      }
+    },
+    "heldout": {
+      "astar": {
+        "attempts": 30,
+        "accepted": 30,
+        "mean_runtime_s": 8.348718067001755,
+        "mean_length_m": 198.05683223055192,
+        "mean_duration_s": 88.56314917817593,
+        "mean_proxy_s": 88.966958630645,
+        "mean_energy_j": 15975.567047622546,
+        "mean_decoded_waypoints": 8.5,
+        "mean_retained_stops": 6.5
+      },
+      "rrt_star": {
+        "attempts": 30,
+        "accepted": 3,
+        "mean_runtime_s": 0.3791708605664705,
+        "mean_length_m": 215.5339685252893,
+        "mean_duration_s": 85.00596562874875,
+        "mean_proxy_s": 85.48353633903614,
+        "mean_energy_j": 15381.65617086469,
+        "mean_decoded_waypoints": 7.333333333333333,
+        "mean_retained_stops": 5.333333333333333
+      },
+      "distance_ga": {
+        "attempts": 30,
+        "accepted": 30,
+        "mean_runtime_s": 16.48226122566824,
+        "mean_length_m": 196.341214680428,
+        "mean_duration_s": 86.9522067558877,
+        "mean_proxy_s": 87.328355058714,
+        "mean_energy_j": 15684.215657330173,
+        "mean_decoded_waypoints": 7.966666666666667,
+        "mean_retained_stops": 5.966666666666667
+      },
+      "proxy_ga": {
+        "attempts": 30,
+        "accepted": 30,
+        "mean_runtime_s": 16.119853004768082,
+        "mean_length_m": 198.42868008027662,
+        "mean_duration_s": 85.46123422980925,
+        "mean_proxy_s": 85.80298258661395,
+        "mean_energy_j": 15417.242888825296,
+        "mean_decoded_waypoints": 7.3,
+        "mean_retained_stops": 5.3
+      },
+      "time_ga": {
+        "attempts": 30,
+        "accepted": 30,
+        "mean_runtime_s": 16.12433174760178,
+        "mean_length_m": 198.36078729507864,
+        "mean_duration_s": 85.48643851593506,
+        "mean_proxy_s": 85.82796459201184,
+        "mean_energy_j": 15421.582642300207,
+        "mean_decoded_waypoints": 7.3,
+        "mean_retained_stops": 5.3
+      },
+      "energy_ga": {
+        "attempts": 30,
+        "accepted": 30,
+        "mean_runtime_s": 16.000071691768486,
+        "mean_length_m": 198.36078729507864,
+        "mean_duration_s": 85.48643851593506,
+        "mean_proxy_s": 85.82796459201184,
+        "mean_energy_j": 15421.582642300207,
+        "mean_decoded_waypoints": 7.3,
+        "mean_retained_stops": 5.3
+      }
+    }
+  },
+  "by_planner_scene_kind": {
+    "development": {
+      "synthetic": {
+        "astar": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "rrt_star": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "distance_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "proxy_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "time_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "energy_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        }
+      },
+      "urban": {
+        "astar": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "rrt_star": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "distance_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "proxy_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "time_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "energy_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        }
+      }
+    },
+    "heldout": {
+      "synthetic": {
+        "astar": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "rrt_star": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "distance_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "proxy_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "time_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "energy_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        }
+      },
+      "urban": {
+        "astar": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "rrt_star": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "distance_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "proxy_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "time_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        },
+        "energy_ga": {
+          "attempts": 0,
+          "accepted": 0,
+          "mean_proxy_s": null,
+          "mean_energy_j": null,
+          "mean_duration_s": null,
+          "mean_length_m": null
+        }
+      }
+    }
+  },
+  "route_level": {
+    "development": {
+      "energy_ga_vs_astar_model_electrical_energy_j": {
+        "metric": "model_electrical_energy_j",
+        "percent_reduction": {
+          "mean": 2.2072246574649776,
+          "ci_low": 1.3958512880869551,
+          "ci_high": 2.9895455822902957,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.5533561274183498,
+          "ArtSci_t0_r1": 1.9692961656429677,
+          "ArtSci_t0_r2": 0.6931818188969388,
+          "ArtSci_t1_r0": 3.086912947847125,
+          "ArtSci_t1_r1": 3.663930690943883,
+          "ArtSci_t1_r2": 3.9816638903227886,
+          "PolyTech_t0_r0": 2.854535312549527,
+          "PolyTech_t0_r1": 2.2942559489119287,
+          "PolyTech_t0_r2": 0.7678890146512873
+        },
+        "permutation_p": 0.003809961900380996,
+        "holm_adjusted_p": 0.03428965710342896
+      },
+      "energy_ga_vs_distance_ga_model_electrical_energy_j": {
+        "metric": "model_electrical_energy_j",
+        "percent_reduction": {
+          "mean": 0.8080940327099564,
+          "ci_low": 0.39170823076095174,
+          "ci_high": 1.2638737761573726,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.16910261099203497,
+          "ArtSci_t0_r1": 0.8709019568263295,
+          "ArtSci_t0_r2": 0.08932915844323372,
+          "ArtSci_t1_r0": 2.059631689171918,
+          "ArtSci_t1_r1": 1.2386757496473755,
+          "ArtSci_t1_r2": 0.4151861363540303,
+          "PolyTech_t0_r0": 1.136069546060097,
+          "PolyTech_t0_r1": 1.3672809016662724,
+          "PolyTech_t0_r2": -0.0733314547716837
+        },
+        "permutation_p": 0.007909920900790991,
+        "holm_adjusted_p": 0.039549604503954956
+      },
+      "energy_ga_vs_time_ga_model_electrical_energy_j": {
+        "metric": "model_electrical_energy_j",
+        "percent_reduction": {
+          "mean": 0.029762398563374322,
+          "ci_low": -0.040277124705012796,
+          "ci_high": 0.12956432039513577,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": -0.1208313741150384,
+          "ArtSci_t0_r1": 0.0,
+          "ArtSci_t0_r2": 0.0,
+          "ArtSci_t1_r0": 0.3886929611854073,
+          "ArtSci_t1_r1": 0.0,
+          "ArtSci_t1_r2": 0.0,
+          "PolyTech_t0_r0": 0.0,
+          "PolyTech_t0_r1": 0.0,
+          "PolyTech_t0_r2": 0.0
+        },
+        "permutation_p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      "proxy_ga_vs_astar_model_electrical_energy_j": {
+        "metric": "model_electrical_energy_j",
+        "percent_reduction": {
+          "mean": 2.214129755171202,
+          "ci_low": 1.4110710520931542,
+          "ci_high": 2.9912318802948463,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.6155020067743688,
+          "ArtSci_t0_r1": 1.9692961656429677,
+          "ArtSci_t0_r2": 0.6931818188969388,
+          "ArtSci_t1_r0": 3.086912947847125,
+          "ArtSci_t1_r1": 3.663930690943883,
+          "ArtSci_t1_r2": 3.9816638903227886,
+          "PolyTech_t0_r0": 2.854535312549527,
+          "PolyTech_t0_r1": 2.2942559489119287,
+          "PolyTech_t0_r2": 0.7678890146512873
+        },
+        "permutation_p": 0.003809961900380996,
+        "holm_adjusted_p": 0.03428965710342896
+      },
+      "proxy_ga_vs_astar_equivalent_hover_time_s": {
+        "metric": "equivalent_hover_time_s",
+        "percent_reduction": {
+          "mean": 2.253737710632576,
+          "ci_low": 1.4313164604565447,
+          "ci_high": 3.048410654152922,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.628763122851488,
+          "ArtSci_t0_r1": 2.009622191931127,
+          "ArtSci_t0_r2": 0.6962702595416208,
+          "ArtSci_t1_r0": 3.1577043120210395,
+          "ArtSci_t1_r1": 3.7340144120573444,
+          "ArtSci_t1_r2": 4.0554954733763635,
+          "PolyTech_t0_r0": 2.895212338867773,
+          "PolyTech_t0_r1": 2.3386569080767594,
+          "PolyTech_t0_r2": 0.7679003769696692
+        },
+        "permutation_p": 0.003809961900380996,
+        "holm_adjusted_p": 0.03428965710342896
+      },
+      "proxy_ga_vs_distance_ga_equivalent_hover_time_s": {
+        "metric": "equivalent_hover_time_s",
+        "percent_reduction": {
+          "mean": 0.8394723145764094,
+          "ci_low": 0.41738435679241354,
+          "ci_high": 1.3019635271522654,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.24326904852520462,
+          "ArtSci_t0_r1": 0.9028958125698886,
+          "ArtSci_t0_r2": 0.09279710126925372,
+          "ArtSci_t1_r0": 2.1200202465910416,
+          "ArtSci_t1_r1": 1.2768134078118303,
+          "ArtSci_t1_r2": 0.43350721690399724,
+          "PolyTech_t0_r0": 1.1565190680930686,
+          "PolyTech_t0_r1": 1.4024999666198164,
+          "PolyTech_t0_r2": -0.07307103719641805
+        },
+        "permutation_p": 0.007909920900790991,
+        "holm_adjusted_p": 0.039549604503954956
+      },
+      "proxy_ga_vs_time_ga_equivalent_hover_time_s": {
+        "metric": "equivalent_hover_time_s",
+        "percent_reduction": {
+          "mean": 0.037481915516157184,
+          "ci_low": -0.019897531102955127,
+          "ci_high": 0.1323432776514267,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": -0.05969259330886538,
+          "ArtSci_t0_r1": 0.0,
+          "ArtSci_t0_r2": 0.0,
+          "ArtSci_t1_r0": 0.39702983295428007,
+          "ArtSci_t1_r1": 0.0,
+          "ArtSci_t1_r2": 0.0,
+          "PolyTech_t0_r0": 0.0,
+          "PolyTech_t0_r1": 0.0,
+          "PolyTech_t0_r2": 0.0
+        },
+        "permutation_p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      "time_ga_vs_astar_flight_duration_s": {
+        "metric": "flight_duration_s",
+        "percent_reduction": {
+          "mean": 2.173489270646798,
+          "ci_low": 1.383758704832229,
+          "ci_high": 2.9585234122011554,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.6717712654153267,
+          "ArtSci_t0_r1": 1.8629114756873002,
+          "ArtSci_t0_r2": 0.6969980993239296,
+          "ArtSci_t1_r0": 2.6061780816047633,
+          "ArtSci_t1_r1": 3.6934100211734058,
+          "ArtSci_t1_r2": 4.086333276887262,
+          "PolyTech_t0_r0": 2.8674184376592504,
+          "PolyTech_t0_r1": 2.3074923979296593,
+          "PolyTech_t0_r2": 0.7688903801402854
+        },
+        "permutation_p": 0.003809961900380996,
+        "holm_adjusted_p": 0.03428965710342896
+      },
+      "time_ga_vs_proxy_ga_flight_duration_s": {
+        "metric": "flight_duration_s",
+        "percent_reduction": {
+          "mean": -0.035924536986408996,
+          "ci_low": -0.1281240022018536,
+          "ci_high": 0.020350391242626605,
+          "routes": 9
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.06105117372787982,
+          "ArtSci_t0_r1": 0.0,
+          "ArtSci_t0_r2": 0.0,
+          "ArtSci_t1_r0": -0.3843720066055608,
+          "ArtSci_t1_r1": 0.0,
+          "ArtSci_t1_r2": 0.0,
+          "PolyTech_t0_r0": 0.0,
+          "PolyTech_t0_r1": 0.0,
+          "PolyTech_t0_r2": 0.0
+        },
+        "permutation_p": 1.0,
+        "holm_adjusted_p": 1.0
+      }
+    },
+    "heldout": {
+      "energy_ga_vs_astar_model_electrical_energy_j": {
+        "metric": "model_electrical_energy_j",
+        "percent_reduction": {
+          "mean": 3.213398390582919,
+          "ci_low": 1.6685437446598854,
+          "ci_high": 4.833900008715784,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 5.977014919826934,
+          "ArtSci_t0_r1": 3.9440539670214148,
+          "ArtSci_t1_r0": 1.6051682392245412,
+          "ArtSci_t1_r1": 0.7298325715817253,
+          "PolyTech_t0_r0": 5.523133086567944,
+          "PolyTech_t0_r1": 1.501187559274953
+        },
+        "permutation_p": 0.03025969740302597,
+        "holm_adjusted_p": 0.2723372766272337
+      },
+      "energy_ga_vs_distance_ga_model_electrical_energy_j": {
+        "metric": "model_electrical_energy_j",
+        "percent_reduction": {
+          "mean": 1.5252705147564558,
+          "ci_low": 0.3803545301693909,
+          "ci_high": 2.7948535936871246,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 4.0963118913660095,
+          "ArtSci_t0_r1": 0.5751253091480039,
+          "ArtSci_t1_r0": 0.10839483607870923,
+          "ArtSci_t1_r1": 0.0,
+          "PolyTech_t0_r0": 2.8815788522350885,
+          "PolyTech_t0_r1": 1.490212199710923
+        },
+        "permutation_p": 0.06160938390616094,
+        "holm_adjusted_p": 0.3080469195308047
+      },
+      "energy_ga_vs_time_ga_model_electrical_energy_j": {
+        "metric": "model_electrical_energy_j",
+        "percent_reduction": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.0,
+          "ArtSci_t0_r1": 0.0,
+          "ArtSci_t1_r0": 0.0,
+          "ArtSci_t1_r1": 0.0,
+          "PolyTech_t0_r0": 0.0,
+          "PolyTech_t0_r1": 0.0
+        },
+        "permutation_p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      "proxy_ga_vs_astar_model_electrical_energy_j": {
+        "metric": "model_electrical_energy_j",
+        "percent_reduction": {
+          "mean": 3.237744228688356,
+          "ci_low": 1.6685437446598856,
+          "ci_high": 4.85824584682122,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 5.977014919826934,
+          "ArtSci_t0_r1": 3.9440539670214148,
+          "ArtSci_t1_r0": 1.6051682392245412,
+          "ArtSci_t1_r1": 0.7298325715817253,
+          "PolyTech_t0_r0": 5.669208115200564,
+          "PolyTech_t0_r1": 1.501187559274953
+        },
+        "permutation_p": 0.03025969740302597,
+        "holm_adjusted_p": 0.2723372766272337
+      },
+      "proxy_ga_vs_astar_equivalent_hover_time_s": {
+        "metric": "equivalent_hover_time_s",
+        "percent_reduction": {
+          "mean": 3.291503749502341,
+          "ci_low": 1.6875484907949534,
+          "ci_high": 4.9492797095769,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 6.103453224819975,
+          "ArtSci_t0_r1": 3.973901242172531,
+          "ArtSci_t1_r0": 1.6308883242120034,
+          "ArtSci_t1_r1": 0.7345671213926801,
+          "PolyTech_t0_r0": 5.780529016616943,
+          "PolyTech_t0_r1": 1.5256835677999123
+        },
+        "permutation_p": 0.03025969740302597,
+        "holm_adjusted_p": 0.2723372766272337
+      },
+      "proxy_ga_vs_distance_ga_equivalent_hover_time_s": {
+        "metric": "equivalent_hover_time_s",
+        "percent_reduction": {
+          "mean": 1.5898279317313644,
+          "ci_low": 0.39127620240509664,
+          "ci_high": 2.895099995194741,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 4.207429269482004,
+          "ArtSci_t0_r1": 0.5832261581837482,
+          "ArtSci_t1_r0": 0.11905780094135218,
+          "ArtSci_t1_r1": 0.0,
+          "PolyTech_t0_r0": 3.1029389074169536,
+          "PolyTech_t0_r1": 1.5263154543641273
+        },
+        "permutation_p": 0.06160938390616094,
+        "holm_adjusted_p": 0.3080469195308047
+      },
+      "proxy_ga_vs_time_ga_equivalent_hover_time_s": {
+        "metric": "equivalent_hover_time_s",
+        "percent_reduction": {
+          "mean": 0.026638940197238604,
+          "ci_low": 0.0,
+          "ci_high": 0.07991682059171581,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.0,
+          "ArtSci_t0_r1": 0.0,
+          "ArtSci_t1_r0": 0.0,
+          "ArtSci_t1_r1": 0.0,
+          "PolyTech_t0_r0": 0.15983364118343163,
+          "PolyTech_t0_r1": 0.0
+        },
+        "permutation_p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      "time_ga_vs_astar_flight_duration_s": {
+        "metric": "flight_duration_s",
+        "percent_reduction": {
+          "mean": 3.222656153019907,
+          "ci_low": 1.6904740264404043,
+          "ci_high": 4.857139342531638,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 6.04439091474979,
+          "ArtSci_t0_r1": 3.9164006637331923,
+          "ArtSci_t1_r0": 1.6626781100508496,
+          "ArtSci_t1_r1": 0.7422574945916866,
+          "PolyTech_t0_r0": 5.4305845371564185,
+          "PolyTech_t0_r1": 1.5396251978375055
+        },
+        "permutation_p": 0.03025969740302597,
+        "holm_adjusted_p": 0.2723372766272337
+      },
+      "time_ga_vs_proxy_ga_flight_duration_s": {
+        "metric": "flight_duration_s",
+        "percent_reduction": {
+          "mean": -0.02701757607855372,
+          "ci_low": -0.08105272823566116,
+          "ci_high": 0.0,
+          "routes": 6
+        },
+        "per_route": {
+          "ArtSci_t0_r0": 0.0,
+          "ArtSci_t0_r1": 0.0,
+          "ArtSci_t1_r0": 0.0,
+          "ArtSci_t1_r1": 0.0,
+          "PolyTech_t0_r0": -0.16210545647132232,
+          "PolyTech_t0_r1": 0.0
+        },
+        "permutation_p": 1.0,
+        "holm_adjusted_p": 1.0
+      }
+    }
+  },
+  "max_quadrature_relative_difference": 3.5900515273072784e-16,
+  "max_energy_quadrature_relative_difference": 3.229589212834951e-16,
+  "pooled_max_speed_mps": 4.950495049504951,
+  "pooled_max_acceleration_mps2": 1.9605920988138423,
+  "pooled_max_vertical_mps": 1.9801980198019804,
+  "pooled_max_energy_fraction": 0.9995312956602856,
+  "finished_utc": "2026-09-29T18:30:22.089058+00:00",
+  "scene_kind": "urbanscene3d",
+  "budget_sweep": {
+    "distance_ga@1200": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 31.247637583443268,
+      "mean_energy_j": 16456.690700797004,
+      "mean_proxy_s": 91.54502190602608,
+      "mean_duration_s": 91.09322323728827
+    },
+    "distance_ga@150": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 10.489164639886035,
+      "mean_energy_j": 16824.054105710296,
+      "mean_proxy_s": 93.61480650706045,
+      "mean_duration_s": 93.11922208322332
+    },
+    "distance_ga@300": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 13.039621375219818,
+      "mean_energy_j": 16753.245341348236,
+      "mean_proxy_s": 93.21558486617586,
+      "mean_duration_s": 92.73486766176066
+    },
+    "distance_ga@600": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 19.04885814532948,
+      "mean_energy_j": 16679.339381843085,
+      "mean_proxy_s": 92.80180429790545,
+      "mean_duration_s": 92.33240107191472
+    },
+    "energy_ga@1200": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 28.10959050833076,
+      "mean_energy_j": 16119.650703855434,
+      "mean_proxy_s": 89.61554039929442,
+      "mean_duration_s": 89.26022821217715
+    },
+    "energy_ga@150": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 10.153881087440823,
+      "mean_energy_j": 16756.547274527406,
+      "mean_proxy_s": 93.22270356548627,
+      "mean_duration_s": 92.7532284125357
+    },
+    "energy_ga@300": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 12.813576065551993,
+      "mean_energy_j": 16602.822233839175,
+      "mean_proxy_s": 92.34980182371496,
+      "mean_duration_s": 91.90765270972148
+    },
+    "energy_ga@600": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 18.095538754662105,
+      "mean_energy_j": 16384.846975055803,
+      "mean_proxy_s": 91.1179761302416,
+      "mean_duration_s": 90.73556332433262
+    },
+    "proxy_ga@1200": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 28.738274722219405,
+      "mean_energy_j": 16102.990036805642,
+      "mean_proxy_s": 89.52192992935143,
+      "mean_duration_s": 89.16456235972956
+    },
+    "proxy_ga@150": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 9.958269048554131,
+      "mean_energy_j": 16756.547274527406,
+      "mean_proxy_s": 93.22270356548627,
+      "mean_duration_s": 92.7532284125357
+    },
+    "proxy_ga@300": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 13.138891179439574,
+      "mean_energy_j": 16602.926904990414,
+      "mean_proxy_s": 92.34952302983221,
+      "mean_duration_s": 91.90721010216805
+    },
+    "proxy_ga@600": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 18.181328375773674,
+      "mean_energy_j": 16378.205035209085,
+      "mean_proxy_s": 91.0798959239677,
+      "mean_duration_s": 90.6940588917589
+    },
+    "rrt_star@1000": {
+      "attempts": 9,
+      "accepted": 3,
+      "mean_runtime_s": 0.7943310080008814,
+      "mean_energy_j": 16433.12774877187,
+      "mean_proxy_s": 91.33825499220303,
+      "mean_duration_s": 90.8370663975817
+    },
+    "rrt_star@2000": {
+      "attempts": 9,
+      "accepted": 3,
+      "mean_runtime_s": 1.7525187661109765,
+      "mean_energy_j": 15891.312867531691,
+      "mean_proxy_s": 88.30917285708003,
+      "mean_duration_s": 87.87801041672606
+    },
+    "rrt_star@250": {
+      "attempts": 9,
+      "accepted": 1,
+      "mean_runtime_s": 0.15968229222198715,
+      "mean_energy_j": 16983.319170424198,
+      "mean_proxy_s": 94.39367320775922,
+      "mean_duration_s": 94.00600197632427
+    },
+    "rrt_star@4000": {
+      "attempts": 9,
+      "accepted": 3,
+      "mean_runtime_s": 3.9031093025542862,
+      "mean_energy_j": 15887.747048744683,
+      "mean_proxy_s": 88.30558315531424,
+      "mean_duration_s": 87.75468651833911
+    },
+    "rrt_star@500": {
+      "attempts": 9,
+      "accepted": 1,
+      "mean_runtime_s": 0.3481405742220684,
+      "mean_energy_j": 16829.738289346238,
+      "mean_proxy_s": 93.54782232930104,
+      "mean_duration_s": 93.05836694042043
+    },
+    "time_ga@1200": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 28.87906690788562,
+      "mean_energy_j": 16105.586233389931,
+      "mean_proxy_s": 89.53788506023699,
+      "mean_duration_s": 89.15886970860474
+    },
+    "time_ga@150": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 10.084769899441097,
+      "mean_energy_j": 16756.547274527406,
+      "mean_proxy_s": 93.22270356548627,
+      "mean_duration_s": 92.7532284125357
+    },
+    "time_ga@300": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 12.653337495551872,
+      "mean_energy_j": 16602.926904990414,
+      "mean_proxy_s": 92.34952302983221,
+      "mean_duration_s": 91.90721010216805
+    },
+    "time_ga@600": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 18.917589920884186,
+      "mean_energy_j": 16388.377414016446,
+      "mean_proxy_s": 91.13718150890043,
+      "mean_duration_s": 90.74357670566872
+    }
+  },
+  "ablations": {
+    "distance_ga@full": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 16.330330741556182,
+      "mean_energy_j": 16777.76703258974,
+      "mean_proxy_s": 93.35614380423212,
+      "mean_duration_s": 92.88477628430384,
+      "mean_length_m": 218.8832477569951
+    },
+    "distance_ga@no_shortcutting": {
+      "attempts": 9,
+      "accepted": 4,
+      "mean_runtime_s": 10.257378582889537,
+      "mean_energy_j": 17492.29364912639,
+      "mean_proxy_s": 97.37537173773738,
+      "mean_duration_s": 96.56290837639733,
+      "mean_length_m": 228.72261509647274
+    },
+    "distance_ga@no_warm_start": {
+      "attempts": 9,
+      "accepted": 0,
+      "mean_runtime_s": 0.4166639064432174,
+      "mean_energy_j": null,
+      "mean_proxy_s": null,
+      "mean_duration_s": null,
+      "mean_length_m": null
+    },
+    "distance_ga@no_warm_start_no_shortcutting": {
+      "attempts": 9,
+      "accepted": 0,
+      "mean_runtime_s": 0.23665580110941342,
+      "mean_energy_j": null,
+      "mean_proxy_s": null,
+      "mean_duration_s": null,
+      "mean_length_m": null
+    },
+    "energy_ga@full": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 15.860553386111052,
+      "mean_energy_j": 16542.884214175763,
+      "mean_proxy_s": 92.01332560586303,
+      "mean_duration_s": 91.569642236124,
+      "mean_length_m": 220.638810056307
+    },
+    "energy_ga@no_shortcutting": {
+      "attempts": 9,
+      "accepted": 4,
+      "mean_runtime_s": 10.198617203666394,
+      "mean_energy_j": 17641.823812527058,
+      "mean_proxy_s": 98.23064161813582,
+      "mean_duration_s": 97.35374676540393,
+      "mean_length_m": 228.6405677555132
+    },
+    "energy_ga@no_warm_start": {
+      "attempts": 9,
+      "accepted": 0,
+      "mean_runtime_s": 0.40426034722218496,
+      "mean_energy_j": null,
+      "mean_proxy_s": null,
+      "mean_duration_s": null,
+      "mean_length_m": null
+    },
+    "energy_ga@no_warm_start_no_shortcutting": {
+      "attempts": 9,
+      "accepted": 0,
+      "mean_runtime_s": 0.25369305088760385,
+      "mean_energy_j": null,
+      "mean_proxy_s": null,
+      "mean_duration_s": null,
+      "mean_length_m": null
+    },
+    "proxy_ga@full": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 15.852270202332067,
+      "mean_energy_j": 16540.649654276083,
+      "mean_proxy_s": 91.9997058619955,
+      "mean_duration_s": 91.55578946987917,
+      "mean_length_m": 220.71740178112753
+    },
+    "proxy_ga@no_shortcutting": {
+      "attempts": 9,
+      "accepted": 4,
+      "mean_runtime_s": 10.155166031222002,
+      "mean_energy_j": 17641.823812527058,
+      "mean_proxy_s": 98.23064161813582,
+      "mean_duration_s": 97.35374676540393,
+      "mean_length_m": 228.6405677555132
+    },
+    "proxy_ga@no_warm_start": {
+      "attempts": 9,
+      "accepted": 0,
+      "mean_runtime_s": 0.3953655074454016,
+      "mean_energy_j": null,
+      "mean_proxy_s": null,
+      "mean_duration_s": null,
+      "mean_length_m": null
+    },
+    "proxy_ga@no_warm_start_no_shortcutting": {
+      "attempts": 9,
+      "accepted": 0,
+      "mean_runtime_s": 0.2684479897773902,
+      "mean_energy_j": null,
+      "mean_proxy_s": null,
+      "mean_duration_s": null,
+      "mean_length_m": null
+    },
+    "time_ga@full": {
+      "attempts": 9,
+      "accepted": 9,
+      "mean_runtime_s": 15.79629272511132,
+      "mean_energy_j": 16535.86107135152,
+      "mean_proxy_s": 91.97242664631817,
+      "mean_duration_s": 91.5280035084092,
+      "mean_length_m": 220.7169110894236
+    },
+    "time_ga@no_shortcutting": {
+      "attempts": 9,
+      "accepted": 4,
+      "mean_runtime_s": 10.131469801000398,
+      "mean_energy_j": 17641.823812527058,
+      "mean_proxy_s": 98.23064161813582,
+      "mean_duration_s": 97.35374676540393,
+      "mean_length_m": 228.6405677555132
+    },
+    "time_ga@no_warm_start": {
+      "attempts": 9,
+      "accepted": 0,
+      "mean_runtime_s": 0.3902938543324126,
+      "mean_energy_j": null,
+      "mean_proxy_s": null,
+      "mean_duration_s": null,
+      "mean_length_m": null
+    },
+    "time_ga@no_warm_start_no_shortcutting": {
+      "attempts": 9,
+      "accepted": 0,
+      "mean_runtime_s": 0.23056165899874437,
+      "mean_energy_j": null,
+      "mean_proxy_s": null,
+      "mean_duration_s": null,
+      "mean_length_m": null
+    }
+  }
+}

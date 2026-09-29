@@ -1,0 +1,112 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      0.0,
+      160.0,
+      10.0
+    ],
+    [
+      18.675233038436797,
+      159.8523509815282,
+      13.494834864113459
+    ],
+    [
+      37.504173345096206,
+      157.86994613358087,
+      15.088910755371977
+    ],
+    [
+      60.391064104882005,
+      114.07832654805686,
+      21.862351474347314
+    ],
+    [
+      99.7171617130921,
+      77.343769087309,
+      15.636545649783857
+    ],
+    [
+      103.81118908752194,
+      52.89406038365943,
+      25.65940346540883
+    ],
+    [
+      78.89062368170823,
+      14.573432818914227,
+      21.816512210942275
+    ],
+    [
+      84.0,
+      0.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    7.480021785531912,
+    7.480021785531914,
+    18.889699043845077,
+    20.51808105948913,
+    10.12762906991734,
+    17.374154196369084,
+    11.188759999735966
+  ],
+  "length_m": 234.10423733768548,
+  "flight_duration_s": 93.05836694042043,
+  "energy_quotient_m1p5_sminus2": 2874.3337425905647,
+  "equivalent_hover_time_s": 93.54782232930104,
+  "model_electrical_energy_j": 16829.738289346238,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 7170.261710653762,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.85142521490076,
+  "decoded_waypoints": 8,
+  "retained_stops": 6,
+  "battery_energy_j": 16829.738289346238,
+  "planner": "rrt_star",
+  "scene": "ArtSci_t1",
+  "route": "ArtSci_t1_r0",
+  "route_set": "development",
+  "seed": 0,
+  "runtime_s": 0.5764775299976463,
+  "scene_kind": "urbanscene3d",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "UrbanScene3D:ArtSci/t1",
+    "asset": "ArtSci_t1.obj",
+    "asset_sha256": "f720f35a3391c33b57fa218a3528b0dbbdd5466ee79988abe1d974161f890ea7",
+    "triangles": 4235844,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 281571,
+    "boxes": 5343,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "prep_record": "urbanscene3d/ArtSci_t1.json",
+    "nodata_fraction": 0.250625,
+    "route_set": "development",
+    "route_index": 0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.950495049504951,
+  "exact_max_acceleration_mps2": 1.960592098813842,
+  "exact_max_vertical_mps": 1.9801980198019802,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 0.0,
+  "energy_quadrature_relative_difference": 2.1616371832678292e-16,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

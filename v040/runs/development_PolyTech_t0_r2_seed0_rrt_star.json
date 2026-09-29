@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      0.0,
+      48.0,
+      10.0
+    ],
+    [
+      31.943202140989992,
+      89.85387265202294,
+      18.725677460150486
+    ],
+    [
+      133.38317675942258,
+      92.66654863384682,
+      16.360765447498707
+    ],
+    [
+      136.0,
+      100.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    20.21351621986099,
+    38.44559221698144,
+    6.022849783100338
+  ],
+  "length_m": 164.9297175274875,
+  "flight_duration_s": 64.68195821994277,
+  "energy_quotient_m1p5_sminus2": 1991.0675032857648,
+  "equivalent_hover_time_s": 64.80111417929857,
+  "model_electrical_energy_j": 11664.53849322373,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 12335.46150677627,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.3368174717276,
+  "decoded_waypoints": 4,
+  "retained_stops": 2,
+  "battery_energy_j": 11664.53849322373,
+  "planner": "rrt_star",
+  "scene": "PolyTech_t0",
+  "route": "PolyTech_t0_r2",
+  "route_set": "development",
+  "seed": 0,
+  "runtime_s": 0.2283824980040663,
+  "scene_kind": "urbanscene3d",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "UrbanScene3D:PolyTech/t0",
+    "asset": "PolyTech_t0.obj",
+    "asset_sha256": "d8a117399903a4b46c12172de08c63b44d369c773128816cbc0fe454db639075",
+    "triangles": 2021736,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 391670,
+    "boxes": 2170,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "prep_record": "urbanscene3d/PolyTech_t0.json",
+    "nodata_fraction": 0.483125,
+    "route_set": "development",
+    "route_index": 2
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 1.600228959618969,
+  "exact_max_vertical_mps": 1.9801980198019802,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 0.0,
+  "energy_quadrature_relative_difference": 0.0,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

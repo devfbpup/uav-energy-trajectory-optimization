@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      4.0,
+      52.0,
+      10.0
+    ],
+    [
+      25.260960452202106,
+      44.189939504832566,
+      13.77136534620313
+    ],
+    [
+      56.62774256223438,
+      39.516448021804784,
+      20.511722604257265
+    ],
+    [
+      74.9409391204547,
+      26.06324811003841,
+      26.45461578411697
+    ],
+    [
+      90.11565402110483,
+      37.496873557048616,
+      26.47000478888547
+    ],
+    [
+      160.0,
+      112.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    8.696818216786827,
+    12.27961565048864,
+    8.896028329638971,
+    7.480021785531915,
+    39.18881925057829
+  ],
+  "length_m": 201.34001702308313,
+  "flight_duration_s": 76.54130323302465,
+  "energy_quotient_m1p5_sminus2": 2364.664967253034,
+  "equivalent_hover_time_s": 76.96018557174887,
+  "model_electrical_energy_j": 13858.059761064178,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 10141.940238935822,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 181.05335519143546,
+  "decoded_waypoints": 6,
+  "retained_stops": 4,
+  "battery_energy_j": 13858.059761064178,
+  "planner": "rrt_star",
+  "scene": "ArtSci_t1",
+  "route": "ArtSci_t1_r0",
+  "route_set": "heldout",
+  "seed": 1,
+  "runtime_s": 0.4762808239975129,
+  "scene_kind": "urbanscene3d",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "UrbanScene3D:ArtSci/t1",
+    "asset": "ArtSci_t1.obj",
+    "asset_sha256": "f720f35a3391c33b57fa218a3528b0dbbdd5466ee79988abe1d974161f890ea7",
+    "triangles": 4235844,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 281571,
+    "boxes": 5343,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "prep_record": "urbanscene3d/ArtSci_t1.json",
+    "nodata_fraction": 0.250625,
+    "route_set": "heldout",
+    "route_index": 0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.950495049504951,
+  "exact_max_acceleration_mps2": 1.9605920988138417,
+  "exact_max_vertical_mps": 1.2525729796871232,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 1.9230942107402704e-16,
+  "energy_quadrature_relative_difference": 1.3125859138351512e-16,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}
