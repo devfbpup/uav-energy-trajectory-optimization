@@ -1,0 +1,4 @@
+scene,dataset,boxes,nodata_fraction,mapped_fraction,tile_sha256
+PolyTech_t0,UrbanScene3D:PolyTech/t0,2170,0.483125,0.57875,d8a117399903a4b46c12172de08c63b44d369c773128816cbc0fe454db639075
+ArtSci_t0,UrbanScene3D:ArtSci/t0,5788,0.3225,0.74375,32ff231999681b052d2f5fbc6bc7a2f5a02072aecabcf2db0810cbd00186ef1e
+ArtSci_t1,UrbanScene3D:ArtSci/t1,5343,0.250625,0.79875,f720f35a3391c33b57fa218a3528b0dbbdd5466ee79988abe1d974161f890ea7

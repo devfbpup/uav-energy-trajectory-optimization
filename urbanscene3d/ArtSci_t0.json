@@ -1,0 +1,270 @@
+{
+  "prep_version": "0.4.0",
+  "dataset": "UrbanScene3D:ArtSci/t0",
+  "scene": "ArtSci",
+  "tile": "t0",
+  "source": {
+    "product": "oblique-photography reconstruction (Oblique.zip)",
+    "srs": "EPSG:4547",
+    "srs_origin": [
+      492703.3637,
+      2493728.617,
+      63.1
+    ],
+    "files": [
+      {
+        "path": "Tile_+011_+010/Tile_+011_+010.obj",
+        "sha256": "d3b96faca8036bf94c5b609f5f082836c6f3eeaaafdc231d9ae7959cb2472561",
+        "vertices": 80685,
+        "triangles": 157876
+      },
+      {
+        "path": "Tile_+011_+011/Tile_+011_+011.obj",
+        "sha256": "1ad2d48df16ace525b2a726f625355cdd78779d1f0809ec500e1344dd44acd1e",
+        "vertices": 12229,
+        "triangles": 22746
+      },
+      {
+        "path": "Tile_+012_+009/Tile_+012_+009.obj",
+        "sha256": "7f9699d531e4c2de5402d0f3bd0e23dbb6e80024887b75523a42b47d405d6046",
+        "vertices": 34,
+        "triangles": 50
+      },
+      {
+        "path": "Tile_+012_+010/Tile_+012_+010.obj",
+        "sha256": "77df33988264870ce787a10ce738fdcf7deccc416e3794a296a9165deeaf302b",
+        "vertices": 253766,
+        "triangles": 502444
+      },
+      {
+        "path": "Tile_+012_+011/Tile_+012_+011.obj",
+        "sha256": "73a69d7c88e199e0decb5a2378d4fdad6349dec7fa5770540dffc9599303e9b1",
+        "vertices": 231603,
+        "triangles": 457831
+      },
+      {
+        "path": "Tile_+012_+012/Tile_+012_+012.obj",
+        "sha256": "8488e0046ad0fd76c1fa8b8da168883866abaf580dadd494366ceac94ce07ddc",
+        "vertices": 7903,
+        "triangles": 14561
+      },
+      {
+        "path": "Tile_+013_+009/Tile_+013_+009.obj",
+        "sha256": "db2bbc6c0d53290901cd3847d9fa1881a0fc991402573e7b1ff2df8e354d2b2d",
+        "vertices": 88978,
+        "triangles": 174997
+      },
+      {
+        "path": "Tile_+013_+010/Tile_+013_+010.obj",
+        "sha256": "75a68b5bed10eda97683bd2a7529a277e8f53f6efd96833fc95041719ac714a4",
+        "vertices": 265685,
+        "triangles": 526025
+      },
+      {
+        "path": "Tile_+013_+011/Tile_+013_+011.obj",
+        "sha256": "d2362c426a6c40b80f5c59784d15ff58b0c2d6d9f6456879650c4c995c5d8704",
+        "vertices": 349446,
+        "triangles": 693396
+      },
+      {
+        "path": "Tile_+013_+012/Tile_+013_+012.obj",
+        "sha256": "6b1fa3db9b5fdcecec1054e08652082ee23658946bce8fb69e0b7864c8e765e8",
+        "vertices": 140495,
+        "triangles": 277049
+      },
+      {
+        "path": "Tile_+014_+009/Tile_+014_+009.obj",
+        "sha256": "d178df51a85ef25bbc4327fb8ad97eba33eea022883448bbc6718a3de6709ef9",
+        "vertices": 72021,
+        "triangles": 139906
+      },
+      {
+        "path": "Tile_+014_+010/Tile_+014_+010.obj",
+        "sha256": "5943d0cec9d589b89d55c18ee72a02add5e575039ff3c08b8590d3c676c7676b",
+        "vertices": 340406,
+        "triangles": 673023
+      },
+      {
+        "path": "Tile_+014_+011/Tile_+014_+011.obj",
+        "sha256": "36e394cf20a82ecd4734e77608626e461e05c7c83bcd90481049fcbd2dfa68b6",
+        "vertices": 318419,
+        "triangles": 630999
+      },
+      {
+        "path": "Tile_+014_+012/Tile_+014_+012.obj",
+        "sha256": "93a49998ec6aea24adec9fee8c2348cd6d517ea10e7db6fc73a093d162380b51",
+        "vertices": 288134,
+        "triangles": 571126
+      },
+      {
+        "path": "Tile_+015_+009/Tile_+015_+009.obj",
+        "sha256": "956364cc0f528c2bc33a56d2545f529e61ace1b98bddd5cfef5c3661e139fee9",
+        "vertices": 196546,
+        "triangles": 387855
+      },
+      {
+        "path": "Tile_+015_+010/Tile_+015_+010.obj",
+        "sha256": "9b5e89f4ee4aa87ffd8d0016866f6bc0d26fb9b1eebc0976a738278e0001e203",
+        "vertices": 222602,
+        "triangles": 438520
+      },
+      {
+        "path": "Tile_+015_+011/Tile_+015_+011.obj",
+        "sha256": "7d646460ed8813206709d2c5d99d164d71e597ac33b9ba905fea0532d394bb01",
+        "vertices": 268606,
+        "triangles": 532654
+      },
+      {
+        "path": "Tile_+015_+012/Tile_+015_+012.obj",
+        "sha256": "205999cc0acf569668e08ecbdc9d215540ab5fac50bf5fb01650e6347fcf5f23",
+        "vertices": 213912,
+        "triangles": 423998
+      },
+      {
+        "path": "Tile_+016_+008/Tile_+016_+008.obj",
+        "sha256": "374af41751cbf9b4e89a6ef261390d41a419c96027f80069cf65e7cc50c043f9",
+        "vertices": 6743,
+        "triangles": 12185
+      },
+      {
+        "path": "Tile_+016_+009/Tile_+016_+009.obj",
+        "sha256": "5a30d1f4296fc71ce534b6bcfbb7c3384c94616a793a33f95172b619c8aa4691",
+        "vertices": 159492,
+        "triangles": 312703
+      },
+      {
+        "path": "Tile_+016_+010/Tile_+016_+010.obj",
+        "sha256": "521104606aa3230e610db694511a4011b456333964cd134f68abb58e9ec052ff",
+        "vertices": 284535,
+        "triangles": 562531
+      },
+      {
+        "path": "Tile_+016_+011/Tile_+016_+011.obj",
+        "sha256": "a53a7df05cec5574d0f636f5122d9d084f6afb42a29ce0ce7c90add0c4e789ee",
+        "vertices": 329853,
+        "triangles": 653320
+      },
+      {
+        "path": "Tile_+016_+012/Tile_+016_+012.obj",
+        "sha256": "c37bb4848413229405e93cd92522034e67e75739a3a1e541e8c69cbe8b920472",
+        "vertices": 95268,
+        "triangles": 187865
+      },
+      {
+        "path": "Tile_+017_+009/Tile_+017_+009.obj",
+        "sha256": "bb9401894437e40027337cb302e131d46f675d5cd8172af086f053497c5cedc7",
+        "vertices": 203,
+        "triangles": 296
+      },
+      {
+        "path": "Tile_+017_+010/Tile_+017_+010.obj",
+        "sha256": "e54a6625d3c7cbedd9217258b95badbb870495828b93e1949eba233c3fe12e34",
+        "vertices": 71409,
+        "triangles": 138974
+      },
+      {
+        "path": "Tile_+017_+011/Tile_+017_+011.obj",
+        "sha256": "10d7c9b413cb6b51ef0c07b92243b1180970147621a1d075f8b0ac79d50ccbf0",
+        "vertices": 357103,
+        "triangles": 708449
+      },
+      {
+        "path": "Tile_+017_+012/Tile_+017_+012.obj",
+        "sha256": "56b8a886e4adae00056ee60b9c870eb4f29477540bca0e783385c7cfefa78e62",
+        "vertices": 39023,
+        "triangles": 74430
+      },
+      {
+        "path": "Tile_+018_+011/Tile_+018_+011.obj",
+        "sha256": "d16895bf744488c939c1c5866bbd23c155d6dcb30dd1dea630bcd74f0f7037db",
+        "vertices": 12426,
+        "triangles": 23676
+      }
+    ],
+    "metadata_xml_sha256": "65b208b3f2e1bc3905c899e245af31f6507f2fb6fc60b3729d2dced286330749",
+    "total_vertices": 4707525,
+    "total_triangles": 9299485
+  },
+  "transform": {
+    "convention": "output = scale * rotation @ source_local + translation",
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "scale": 1.0,
+    "translation": [
+      64.0,
+      116.0,
+      39.497
+    ],
+    "source_units": "metres",
+    "up_axis": "Z"
+  },
+  "tile_selection": {
+    "rule": "40x40 window of 4 m cells maximising mapped cells; ties smallest x then y; with two tiles, the non-overlapping pair with the largest combined count",
+    "cell_m": 4.0,
+    "window_index": [
+      2,
+      11
+    ],
+    "mapped_cells": 1190,
+    "mapped_fraction": 0.74375
+  },
+  "crop_box_source": {
+    "xy_lower": [
+      -64.0,
+      -116.0
+    ],
+    "xy_upper": [
+      96.0,
+      44.0
+    ],
+    "z_floor": -39.497
+  },
+  "crop_box_output": {
+    "xy_lower": [
+      0.0,
+      0.0
+    ],
+    "xy_upper": [
+      160.0,
+      160.0
+    ],
+    "z_floor": 0.0
+  },
+  "ground_datum": {
+    "rule": "10th percentile of per-cell minimum vertex z over mapped cells",
+    "source_z": -39.497
+  },
+  "nodata": {
+    "rule": "unmapped 4 m cells dilated by one cell become closed boxes over the flight band",
+    "z_range": [
+      2.0,
+      29.5
+    ],
+    "cells": 516,
+    "fraction": 0.3225,
+    "boxes": 29
+  },
+  "decimation": "none",
+  "coordinate_decimals": 3,
+  "output": {
+    "file": "ArtSci_t0.obj",
+    "sha256": "32ff231999681b052d2f5fbc6bc7a2f5a02072aecabcf2db0810cbd00186ef1e",
+    "mesh_vertices": 2331050,
+    "mesh_triangles": 4606716
+  }
+}

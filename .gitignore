@@ -1,3 +1,11 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# UrbanScene3D data and anything derived from it (dataset licence: no redistribution).
+# Only preparation records (urbanscene3d/*.json), scripts and results are committed.
+UrbanScene3D_data/
+derived/
+*.boxes-*.json
+Tile_*/
+*.obj.box-store-snap-*

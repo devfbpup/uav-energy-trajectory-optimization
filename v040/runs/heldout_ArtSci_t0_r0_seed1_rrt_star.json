@@ -1,0 +1,39 @@
+{
+  "success": false,
+  "reason": "no_geometric_path",
+  "violation": 1000000000.0,
+  "planner": "rrt_star",
+  "scene": "ArtSci_t0",
+  "route": "ArtSci_t0_r0",
+  "route_set": "heldout",
+  "seed": 1,
+  "runtime_s": 0.6612638579972554,
+  "scene_kind": "urbanscene3d",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "UrbanScene3D:ArtSci/t0",
+    "asset": "ArtSci_t0.obj",
+    "asset_sha256": "32ff231999681b052d2f5fbc6bc7a2f5a02072aecabcf2db0810cbd00186ef1e",
+    "triangles": 4607064,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 342603,
+    "boxes": 5788,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "prep_record": "urbanscene3d/ArtSci_t0.json",
+    "nodata_fraction": 0.3225,
+    "route_set": "heldout",
+    "route_index": 0
+  },
+  "history": []
+}

@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      0.0,
+      48.0,
+      10.0
+    ],
+    [
+      28.0,
+      88.0,
+      10.0
+    ],
+    [
+      136.0,
+      96.0,
+      10.0
+    ],
+    [
+      136.0,
+      100.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    18.492931757836562,
+    41.017068703163076,
+    3.4320693745911877
+  ],
+  "length_m": 161.12211342838188,
+  "flight_duration_s": 62.94206983559082,
+  "energy_quotient_m1p5_sminus2": 1937.8093697616578,
+  "equivalent_hover_time_s": 63.06777948031088,
+  "model_electrical_energy_j": 11354.638265085454,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 12645.361734914546,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.39823435652147,
+  "decoded_waypoints": 4,
+  "retained_stops": 2,
+  "battery_energy_j": 11354.638265085454,
+  "planner": "astar",
+  "scene": "PolyTech_t0",
+  "route": "PolyTech_t0_r2",
+  "route_set": "development",
+  "seed": 0,
+  "runtime_s": 1.574269220000133,
+  "scene_kind": "urbanscene3d",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "UrbanScene3D:PolyTech/t0",
+    "asset": "PolyTech_t0.obj",
+    "asset_sha256": "d8a117399903a4b46c12172de08c63b44d369c773128816cbc0fe454db639075",
+    "triangles": 2021736,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 391670,
+    "boxes": 2170,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "prep_record": "urbanscene3d/PolyTech_t0.json",
+    "nodata_fraction": 0.483125,
+    "route_set": "development",
+    "route_index": 2
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 1.9605920988138414,
+  "exact_max_vertical_mps": 0.0,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 0.0,
+  "energy_quadrature_relative_difference": 0.0,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

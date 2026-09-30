@@ -1,0 +1,296 @@
+{
+  "version": "0.4.0",
+  "stage": "UrbanScene3D tiles, v0.3.0 protocol",
+  "scenes": [
+    "PolyTech_t0",
+    "ArtSci_t0",
+    "ArtSci_t1"
+  ],
+  "datasets": {
+    "PolyTech_t0": "UrbanScene3D:PolyTech/t0",
+    "ArtSci_t0": "UrbanScene3D:ArtSci/t0",
+    "ArtSci_t1": "UrbanScene3D:ArtSci/t1"
+  },
+  "tile_sha256": {
+    "PolyTech_t0": "d8a117399903a4b46c12172de08c63b44d369c773128816cbc0fe454db639075",
+    "ArtSci_t0": "32ff231999681b052d2f5fbc6bc7a2f5a02072aecabcf2db0810cbd00186ef1e",
+    "ArtSci_t1": "f720f35a3391c33b57fa218a3528b0dbbdd5466ee79988abe1d974161f890ea7"
+  },
+  "routes_file": "urbanscene3d/routes.json",
+  "routes": {
+    "PolyTech_t0": {
+      "development": [
+        [
+          [
+            0.0,
+            0.0,
+            10.0
+          ],
+          [
+            160.0,
+            148.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            24.0,
+            10.0
+          ],
+          [
+            160.0,
+            100.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            48.0,
+            10.0
+          ],
+          [
+            136.0,
+            100.0,
+            10.0
+          ]
+        ]
+      ],
+      "heldout": [
+        [
+          [
+            24.0,
+            0.0,
+            10.0
+          ],
+          [
+            132.0,
+            160.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            24.0,
+            24.0,
+            10.0
+          ],
+          [
+            108.0,
+            160.0,
+            10.0
+          ]
+        ]
+      ]
+    },
+    "ArtSci_t0": {
+      "development": [
+        [
+          [
+            0.0,
+            48.0,
+            10.0
+          ],
+          [
+            160.0,
+            136.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            96.0,
+            0.0,
+            10.0
+          ],
+          [
+            120.0,
+            160.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            32.0,
+            56.0,
+            10.0
+          ],
+          [
+            160.0,
+            112.0,
+            10.0
+          ]
+        ]
+      ],
+      "heldout": [
+        [
+          [
+            20.0,
+            32.0,
+            10.0
+          ],
+          [
+            144.0,
+            156.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            16.0,
+            76.0,
+            10.0
+          ],
+          [
+            160.0,
+            20.0,
+            10.0
+          ]
+        ]
+      ]
+    },
+    "ArtSci_t1": {
+      "development": [
+        [
+          [
+            0.0,
+            160.0,
+            10.0
+          ],
+          [
+            84.0,
+            0.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            4.0,
+            132.0,
+            10.0
+          ],
+          [
+            144.0,
+            92.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            76.0,
+            10.0
+          ],
+          [
+            136.0,
+            120.0,
+            10.0
+          ]
+        ]
+      ],
+      "heldout": [
+        [
+          [
+            4.0,
+            52.0,
+            10.0
+          ],
+          [
+            160.0,
+            112.0,
+            10.0
+          ]
+        ],
+        [
+          [
+            24.0,
+            160.0,
+            10.0
+          ],
+          [
+            76.0,
+            24.0,
+            10.0
+          ]
+        ]
+      ]
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "planners": [
+    "astar",
+    "rrt_star",
+    "distance_ga",
+    "proxy_ga",
+    "time_ga",
+    "energy_ga"
+  ],
+  "budgets": [
+    150,
+    300,
+    600,
+    1200
+  ],
+  "rrt_budgets": [
+    250,
+    500,
+    1000,
+    2000,
+    4000
+  ],
+  "ablations": [
+    "full",
+    "no_shortcutting",
+    "no_warm_start",
+    "no_warm_start_no_shortcutting"
+  ],
+  "settings_urban": {
+    "g": 9.81,
+    "max_speed": 5.0,
+    "max_acceleration": 2.0,
+    "max_vertical_speed": 2.0,
+    "vehicle_radius": 0.25,
+    "clearance": 0.5,
+    "grid_step": 4.0,
+    "population": 24,
+    "generations": 25,
+    "max_waypoints": 16,
+    "rrt_iterations": 500,
+    "energy_reference_s": 100.0,
+    "length_reference_m": 100.0,
+    "time_reference_s": 100.0,
+    "energy_reference_j": 10000.0,
+    "evaluation_budget": null,
+    "warm_start": true,
+    "shortcutting": true,
+    "enforce_energy_budget": true,
+    "propulsion": {
+      "g": 9.81,
+      "mass_kg": 1.5,
+      "rotors": 4,
+      "rotor_radius_m": 0.12,
+      "air_density_kgpm3": 1.225,
+      "figure_of_merit": 0.7,
+      "hover_profile_power_w": 22.0,
+      "drag_area_m2": 0.06,
+      "electrical_efficiency": 0.85,
+      "ancillary_power_w": 10.0,
+      "mission_energy_allowance_j": 30000.0,
+      "reserve_fraction": 0.2
+    }
+  },
+  "tolerance": 1e-09,
+  "started_utc": "2026-09-29T18:30:21.828673+00:00",
+  "python": "3.13.5",
+  "numpy": "2.2.4",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "processor": "x86_64",
+  "main_stage_workers": 1
+}

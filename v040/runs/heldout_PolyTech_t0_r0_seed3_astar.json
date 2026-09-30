@@ -1,0 +1,124 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      24.0,
+      0.0,
+      10.0
+    ],
+    [
+      60.0,
+      52.0,
+      2.0
+    ],
+    [
+      68.0,
+      52.0,
+      2.0
+    ],
+    [
+      76.0,
+      64.0,
+      2.0
+    ],
+    [
+      80.0,
+      72.0,
+      6.0
+    ],
+    [
+      100.0,
+      96.0,
+      26.0
+    ],
+    [
+      100.0,
+      108.0,
+      26.0
+    ],
+    [
+      120.0,
+      136.0,
+      26.0
+    ],
+    [
+      120.0,
+      144.0,
+      26.0
+    ],
+    [
+      132.0,
+      160.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    24.14512683752148,
+    4.853679056552203,
+    6.516912591182119,
+    5.371478855914439,
+    18.9375,
+    5.9445185318930776,
+    13.032522779569579,
+    4.853679056552203,
+    15.15
+  ],
+  "length_m": 213.0859458749103,
+  "flight_duration_s": 98.80541770918511,
+  "energy_quotient_m1p5_sminus2": 3053.363435643702,
+  "equivalent_hover_time_s": 99.37450754307507,
+  "model_electrical_energy_j": 17825.44292012416,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 6174.557079875842,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.40956997509943,
+  "decoded_waypoints": 10,
+  "retained_stops": 8,
+  "battery_energy_j": 17825.44292012416,
+  "planner": "astar",
+  "scene": "PolyTech_t0",
+  "route": "PolyTech_t0_r0",
+  "route_set": "heldout",
+  "seed": 3,
+  "runtime_s": 4.3885752400019555,
+  "scene_kind": "urbanscene3d",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "UrbanScene3D:PolyTech/t0",
+    "asset": "PolyTech_t0.obj",
+    "asset_sha256": "d8a117399903a4b46c12172de08c63b44d369c773128816cbc0fe454db639075",
+    "triangles": 2021736,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 391670,
+    "boxes": 2170,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "prep_record": "urbanscene3d/PolyTech_t0.json",
+    "nodata_fraction": 0.483125,
+    "route_set": "heldout",
+    "route_index": 0
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 1.9605920988138417,
+  "exact_max_vertical_mps": 1.9801980198019802,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 0.0,
+  "energy_quadrature_relative_difference": 0.0,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

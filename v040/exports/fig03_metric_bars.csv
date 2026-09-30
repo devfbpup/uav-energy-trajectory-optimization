@@ -1,0 +1,49 @@
+metric,scenes,planner,mean,population_sd,accepted
+model_electrical_energy_j,procedural urban (v0.3.0),astar,12526.058339795934,3044.073692666849,45
+model_electrical_energy_j,procedural urban (v0.3.0),rrt_star,13004.79028443975,3732.855834007323,45
+model_electrical_energy_j,procedural urban (v0.3.0),distance_ga,12495.598866203722,3000.860620002893,45
+model_electrical_energy_j,procedural urban (v0.3.0),proxy_ga,12475.514571639573,2972.3859843156097,45
+model_electrical_energy_j,procedural urban (v0.3.0),time_ga,12482.552276956163,2982.294197175211,45
+model_electrical_energy_j,procedural urban (v0.3.0),energy_ga,12475.514571639573,2972.3859843156097,45
+model_electrical_energy_j,UrbanScene3D (v0.4.0),astar,16477.06378010183,3459.2746375471197,45
+model_electrical_energy_j,UrbanScene3D (v0.4.0),rrt_star,13093.558885710036,1807.46733470896,6
+model_electrical_energy_j,UrbanScene3D (v0.4.0),distance_ga,16240.489722607106,3410.5699309125066,45
+model_electrical_energy_j,UrbanScene3D (v0.4.0),proxy_ga,16097.576261167222,3342.2743933589995,45
+model_electrical_energy_j,UrbanScene3D (v0.4.0),time_ga,16103.443792221511,3342.3849208804554,45
+model_electrical_energy_j,UrbanScene3D (v0.4.0),energy_ga,16098.604708357454,3341.890231169602,45
+flight_duration_s,procedural urban (v0.3.0),astar,69.29104764495432,16.5796369623826,45
+flight_duration_s,procedural urban (v0.3.0),rrt_star,72.05588311306228,20.558229254404814,45
+flight_duration_s,procedural urban (v0.3.0),distance_ga,69.11942849363098,16.336294841166808,45
+flight_duration_s,procedural urban (v0.3.0),proxy_ga,69.00617276335562,16.175596511154417,45
+flight_duration_s,procedural urban (v0.3.0),time_ga,69.04010894610751,16.22342732671913,45
+flight_duration_s,procedural urban (v0.3.0),energy_ga,69.00617276335562,16.175596511154417,45
+flight_duration_s,UrbanScene3D (v0.4.0),astar,91.23974422612505,19.194621491426908,45
+flight_duration_s,UrbanScene3D (v0.4.0),rrt_star,72.57579901075525,9.94031174460763,6
+flight_duration_s,UrbanScene3D (v0.4.0),distance_ga,89.93054015339338,18.932418433717473,45
+flight_duration_s,UrbanScene3D (v0.4.0),proxy_ga,89.14877215927592,18.581420288616,45
+flight_duration_s,UrbanScene3D (v0.4.0),time_ga,89.18038955343565,18.58199007252915,45
+flight_duration_s,UrbanScene3D (v0.4.0),energy_ga,89.15462796478477,18.57921775091311,45
+length_m,procedural urban (v0.3.0),astar,180.57995422972522,40.44797864370217,45
+length_m,procedural urban (v0.3.0),rrt_star,188.74048065302915,52.181309038832886,45
+length_m,procedural urban (v0.3.0),distance_ga,180.17544862894542,39.86601864284919,45
+length_m,procedural urban (v0.3.0),proxy_ga,180.48199455672298,40.30131921715541,45
+length_m,procedural urban (v0.3.0),time_ga,180.50187465290657,40.330446424268104,45
+length_m,procedural urban (v0.3.0),energy_ga,180.48199455672298,40.30131921715541,45
+length_m,UrbanScene3D (v0.4.0),astar,214.32767797372003,30.90314584916779,45
+length_m,UrbanScene3D (v0.4.0),rrt_star,180.42349491618558,24.26138377878102,6
+length_m,UrbanScene3D (v0.4.0),distance_ga,212.89637022688802,30.65503723840308,45
+length_m,UrbanScene3D (v0.4.0),proxy_ga,213.90959741084293,31.161084044473288,45
+length_m,UrbanScene3D (v0.4.0),time_ga,213.89600865710997,31.157317910405016,45
+length_m,UrbanScene3D (v0.4.0),energy_ga,213.90155329254253,31.164593311792956,45
+retained_stops,procedural urban (v0.3.0),astar,2.6666666666666665,3.7712361663282534,45
+retained_stops,procedural urban (v0.3.0),rrt_star,1.8222222222222222,2.652369078464583,45
+retained_stops,procedural urban (v0.3.0),distance_ga,2.6666666666666665,3.7712361663282534,45
+retained_stops,procedural urban (v0.3.0),proxy_ga,2.6,3.684200501239493,45
+retained_stops,procedural urban (v0.3.0),time_ga,2.6444444444444444,3.742581138765987,45
+retained_stops,procedural urban (v0.3.0),energy_ga,2.6,3.684200501239493,45
+retained_stops,UrbanScene3D (v0.4.0),astar,6.333333333333333,2.8284271247461903,45
+retained_stops,UrbanScene3D (v0.4.0),rrt_star,2.8333333333333335,1.4624940645653537,6
+retained_stops,UrbanScene3D (v0.4.0),distance_ga,6.044444444444444,2.7158428653248334,45
+retained_stops,UrbanScene3D (v0.4.0),proxy_ga,5.533333333333333,2.390722810272148,45
+retained_stops,UrbanScene3D (v0.4.0),time_ga,5.555555555555555,2.390309655026641,45
+retained_stops,UrbanScene3D (v0.4.0),energy_ga,5.533333333333333,2.390722810272148,45

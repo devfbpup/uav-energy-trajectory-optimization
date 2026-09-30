@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "reason": "passed_translational_and_energy_checks",
+  "violation": 0.0,
+  "path": [
+    [
+      24.0,
+      160.0,
+      10.0
+    ],
+    [
+      32.0,
+      160.0,
+      10.0
+    ],
+    [
+      68.0,
+      104.0,
+      10.0
+    ],
+    [
+      104.0,
+      60.0,
+      22.0
+    ],
+    [
+      76.0,
+      28.0,
+      22.0
+    ],
+    [
+      76.0,
+      24.0,
+      10.0
+    ]
+  ],
+  "segment_durations_s": [
+    4.853679056552203,
+    25.21462522029626,
+    22.006646155195934,
+    16.104670906292995,
+    11.3625
+  ],
+  "length_m": 187.8463179853209,
+  "flight_duration_s": 79.5421213383374,
+  "energy_quotient_m1p5_sminus2": 2450.7143309015387,
+  "equivalent_hover_time_s": 79.76074086665513,
+  "model_electrical_energy_j": 14341.039653301646,
+  "mission_usable_energy_j": 24000.0,
+  "energy_margin_j": 9658.960346698354,
+  "energy_feasible": true,
+  "mean_electrical_power_w": 180.2949105707294,
+  "decoded_waypoints": 6,
+  "retained_stops": 4,
+  "battery_energy_j": 14341.039653301646,
+  "planner": "astar",
+  "scene": "ArtSci_t1",
+  "route": "ArtSci_t1_r1",
+  "route_set": "heldout",
+  "seed": 2,
+  "runtime_s": 6.956037704003393,
+  "scene_kind": "urbanscene3d",
+  "provenance": {
+    "kind": "ingested_mesh",
+    "dataset": "UrbanScene3D:ArtSci/t1",
+    "asset": "ArtSci_t1.obj",
+    "asset_sha256": "f720f35a3391c33b57fa218a3528b0dbbdd5466ee79988abe1d974161f890ea7",
+    "triangles": 4235844,
+    "voxel_size_m": 1.0,
+    "workspace_lower": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "workspace_upper": [
+      160.0,
+      160.0,
+      30.0
+    ],
+    "occupied_voxels": 281571,
+    "boxes": 5343,
+    "ingest_version": "0.3.0",
+    "conservative": "voxels are rounded outward and vertically filled; free space is never enlarged",
+    "prep_record": "urbanscene3d/ArtSci_t1.json",
+    "nodata_fraction": 0.250625,
+    "route_set": "heldout",
+    "route_index": 1
+  },
+  "final_check": true,
+  "sat_collision_check": true,
+  "exact_max_speed_mps": 4.9504950495049505,
+  "exact_max_acceleration_mps2": 1.9605920988138417,
+  "exact_max_vertical_mps": 1.9801980198019802,
+  "analytic_bounds_check": true,
+  "quadrature_relative_difference": 1.8555706193596922e-16,
+  "energy_quadrature_relative_difference": 0.0,
+  "quadrature_check": true,
+  "energy_constraint_check": true,
+  "history": []
+}

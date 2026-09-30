@@ -1,0 +1,541 @@
+{
+  "note": "procedural = v0.3.0 records restricted to urban_a/b/c (15 routes, 450 attempts); urbanscene3d = this stage. Identical planners, settings, seeds and statistics.",
+  "route_sets": {
+    "development": {
+      "route_level": {
+        "energy_ga_vs_astar_model_electrical_energy_j": {
+          "procedural": {
+            "mean": 0.2995611405369025,
+            "ci_low": 0.0,
+            "ci_high": 0.6295961850552071,
+            "routes": 9,
+            "permutation_p": 0.24839751602483975,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 2.2072246574649776,
+            "ci_low": 1.3958512880869551,
+            "ci_high": 2.9895455822902957,
+            "routes": 9,
+            "permutation_p": 0.003809961900380996,
+            "holm_adjusted_p": 0.03428965710342896
+          }
+        },
+        "energy_ga_vs_distance_ga_model_electrical_energy_j": {
+          "procedural": {
+            "mean": 0.11987847309880204,
+            "ci_low": 0.0,
+            "ci_high": 0.2459695814583469,
+            "routes": 9,
+            "permutation_p": 0.24839751602483975,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 0.8080940327099564,
+            "ci_low": 0.39170823076095174,
+            "ci_high": 1.2638737761573726,
+            "routes": 9,
+            "permutation_p": 0.007909920900790991,
+            "holm_adjusted_p": 0.039549604503954956
+          }
+        },
+        "energy_ga_vs_time_ga_model_electrical_energy_j": {
+          "procedural": {
+            "mean": 0.042040118313065755,
+            "ci_low": 0.0,
+            "ci_high": 0.12612035493919727,
+            "routes": 9,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 0.029762398563374322,
+            "ci_low": -0.040277124705012796,
+            "ci_high": 0.12956432039513577,
+            "routes": 9,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          }
+        },
+        "proxy_ga_vs_astar_model_electrical_energy_j": {
+          "procedural": {
+            "mean": 0.2995611405369025,
+            "ci_low": 0.0,
+            "ci_high": 0.6295961850552071,
+            "routes": 9,
+            "permutation_p": 0.24839751602483975,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 2.214129755171202,
+            "ci_low": 1.4110710520931542,
+            "ci_high": 2.9912318802948463,
+            "routes": 9,
+            "permutation_p": 0.003809961900380996,
+            "holm_adjusted_p": 0.03428965710342896
+          }
+        },
+        "proxy_ga_vs_astar_equivalent_hover_time_s": {
+          "procedural": {
+            "mean": 0.3057017102139128,
+            "ci_low": 0.0,
+            "ci_high": 0.6402826388747553,
+            "routes": 9,
+            "permutation_p": 0.24839751602483975,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 2.253737710632576,
+            "ci_low": 1.4313164604565447,
+            "ci_high": 3.048410654152922,
+            "routes": 9,
+            "permutation_p": 0.003809961900380996,
+            "holm_adjusted_p": 0.03428965710342896
+          }
+        },
+        "proxy_ga_vs_distance_ga_equivalent_hover_time_s": {
+          "procedural": {
+            "mean": 0.1259097568913791,
+            "ci_low": 0.0,
+            "ci_high": 0.25813302529289034,
+            "routes": 9,
+            "permutation_p": 0.24839751602483975,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 0.8394723145764094,
+            "ci_low": 0.41738435679241354,
+            "ci_high": 1.3019635271522654,
+            "routes": 9,
+            "permutation_p": 0.007909920900790991,
+            "holm_adjusted_p": 0.039549604503954956
+          }
+        },
+        "proxy_ga_vs_time_ga_equivalent_hover_time_s": {
+          "procedural": {
+            "mean": 0.043152064215176006,
+            "ci_low": 0.0,
+            "ci_high": 0.12945619264552802,
+            "routes": 9,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 0.037481915516157184,
+            "ci_low": -0.019897531102955127,
+            "ci_high": 0.1323432776514267,
+            "routes": 9,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          }
+        },
+        "time_ga_vs_astar_flight_duration_s": {
+          "procedural": {
+            "mean": 0.2699106880917282,
+            "ci_low": 0.0,
+            "ci_high": 0.572179614609345,
+            "routes": 9,
+            "permutation_p": 0.24839751602483975,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 2.173489270646798,
+            "ci_low": 1.383758704832229,
+            "ci_high": 2.9585234122011554,
+            "routes": 9,
+            "permutation_p": 0.003809961900380996,
+            "holm_adjusted_p": 0.03428965710342896
+          }
+        },
+        "time_ga_vs_proxy_ga_flight_duration_s": {
+          "procedural": {
+            "mean": -0.0369302118076847,
+            "ci_low": -0.11079063542305409,
+            "ci_high": 0.0,
+            "routes": 9,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": -0.035924536986408996,
+            "ci_low": -0.1281240022018536,
+            "ci_high": 0.020350391242626605,
+            "routes": 9,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          }
+        }
+      },
+      "by_planner": {
+        "procedural": {
+          "astar": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 180.57995422972522,
+            "mean_duration_s": 69.29104764495432,
+            "mean_energy_j": 12526.058339795934,
+            "mean_retained_stops": 2.6666666666666665
+          },
+          "rrt_star": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 188.74048065302915,
+            "mean_duration_s": 72.05588311306228,
+            "mean_energy_j": 13004.79028443975,
+            "mean_retained_stops": 1.8222222222222222
+          },
+          "distance_ga": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 180.17544862894542,
+            "mean_duration_s": 69.11942849363098,
+            "mean_energy_j": 12495.598866203722,
+            "mean_retained_stops": 2.6666666666666665
+          },
+          "proxy_ga": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 180.48199455672298,
+            "mean_duration_s": 69.00617276335562,
+            "mean_energy_j": 12475.514571639573,
+            "mean_retained_stops": 2.6
+          },
+          "time_ga": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 180.50187465290657,
+            "mean_duration_s": 69.04010894610751,
+            "mean_energy_j": 12482.552276956163,
+            "mean_retained_stops": 2.6444444444444444
+          },
+          "energy_ga": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 180.48199455672298,
+            "mean_duration_s": 69.00617276335562,
+            "mean_energy_j": 12475.514571639573,
+            "mean_retained_stops": 2.6
+          }
+        },
+        "urbanscene3d": {
+          "astar": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 214.32767797372003,
+            "mean_duration_s": 91.23974422612505,
+            "mean_energy_j": 16477.06378010183,
+            "mean_retained_stops": 6.333333333333333
+          },
+          "rrt_star": {
+            "attempts": 45,
+            "accepted": 6,
+            "mean_length_m": 180.42349491618558,
+            "mean_duration_s": 72.57579901075525,
+            "mean_energy_j": 13093.558885710036,
+            "mean_retained_stops": 2.8333333333333335
+          },
+          "distance_ga": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 212.89637022688802,
+            "mean_duration_s": 89.93054015339338,
+            "mean_energy_j": 16240.489722607106,
+            "mean_retained_stops": 6.044444444444444
+          },
+          "proxy_ga": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 213.90959741084293,
+            "mean_duration_s": 89.14877215927592,
+            "mean_energy_j": 16097.576261167222,
+            "mean_retained_stops": 5.533333333333333
+          },
+          "time_ga": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 213.89600865710997,
+            "mean_duration_s": 89.18038955343565,
+            "mean_energy_j": 16103.443792221511,
+            "mean_retained_stops": 5.555555555555555
+          },
+          "energy_ga": {
+            "attempts": 45,
+            "accepted": 45,
+            "mean_length_m": 213.90155329254253,
+            "mean_duration_s": 89.15462796478477,
+            "mean_energy_j": 16098.604708357454,
+            "mean_retained_stops": 5.533333333333333
+          }
+        }
+      }
+    },
+    "heldout": {
+      "route_level": {
+        "energy_ga_vs_astar_model_electrical_energy_j": {
+          "procedural": {
+            "mean": 1.1676181108350556,
+            "ci_low": 0.5912286533541329,
+            "ci_high": 2.027791564306685,
+            "routes": 6,
+            "permutation_p": 0.03025969740302597,
+            "holm_adjusted_p": 0.2723372766272337
+          },
+          "urbanscene3d": {
+            "mean": 3.213398390582919,
+            "ci_low": 1.6685437446598854,
+            "ci_high": 4.833900008715784,
+            "routes": 6,
+            "permutation_p": 0.03025969740302597,
+            "holm_adjusted_p": 0.2723372766272337
+          }
+        },
+        "energy_ga_vs_distance_ga_model_electrical_energy_j": {
+          "procedural": {
+            "mean": 0.43358751710318,
+            "ci_low": 0.0014175426272889369,
+            "ci_high": 1.124995389089732,
+            "routes": 6,
+            "permutation_p": 0.1864381356186438,
+            "holm_adjusted_p": 0.932190678093219
+          },
+          "urbanscene3d": {
+            "mean": 1.5252705147564558,
+            "ci_low": 0.3803545301693909,
+            "ci_high": 2.7948535936871246,
+            "routes": 6,
+            "permutation_p": 0.06160938390616094,
+            "holm_adjusted_p": 0.3080469195308047
+          }
+        },
+        "energy_ga_vs_time_ga_model_electrical_energy_j": {
+          "procedural": {
+            "mean": -0.04047791300448783,
+            "ci_low": -0.08793595537159242,
+            "ci_high": 0.0,
+            "routes": 6,
+            "permutation_p": 0.5007649923500765,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "routes": 6,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          }
+        },
+        "proxy_ga_vs_astar_model_electrical_energy_j": {
+          "procedural": {
+            "mean": 1.1675310277524595,
+            "ci_low": 0.5909674041063447,
+            "ci_high": 2.027791564306685,
+            "routes": 6,
+            "permutation_p": 0.03025969740302597,
+            "holm_adjusted_p": 0.2723372766272337
+          },
+          "urbanscene3d": {
+            "mean": 3.237744228688356,
+            "ci_low": 1.6685437446598856,
+            "ci_high": 4.85824584682122,
+            "routes": 6,
+            "permutation_p": 0.03025969740302597,
+            "holm_adjusted_p": 0.2723372766272337
+          }
+        },
+        "proxy_ga_vs_astar_equivalent_hover_time_s": {
+          "procedural": {
+            "mean": 1.1875309257160234,
+            "ci_low": 0.604929653302715,
+            "ci_high": 2.06197642706248,
+            "routes": 6,
+            "permutation_p": 0.03025969740302597,
+            "holm_adjusted_p": 0.2723372766272337
+          },
+          "urbanscene3d": {
+            "mean": 3.291503749502341,
+            "ci_low": 1.6875484907949534,
+            "ci_high": 4.9492797095769,
+            "routes": 6,
+            "permutation_p": 0.03025969740302597,
+            "holm_adjusted_p": 0.2723372766272337
+          }
+        },
+        "proxy_ga_vs_distance_ga_equivalent_hover_time_s": {
+          "procedural": {
+            "mean": 0.45167258974617974,
+            "ci_low": 0.009390732016508347,
+            "ci_high": 1.160275041264307,
+            "routes": 6,
+            "permutation_p": 0.1864381356186438,
+            "holm_adjusted_p": 0.932190678093219
+          },
+          "urbanscene3d": {
+            "mean": 1.5898279317313644,
+            "ci_low": 0.39127620240509664,
+            "ci_high": 2.895099995194741,
+            "routes": 6,
+            "permutation_p": 0.06160938390616094,
+            "holm_adjusted_p": 0.3080469195308047
+          }
+        },
+        "proxy_ga_vs_time_ga_equivalent_hover_time_s": {
+          "procedural": {
+            "mean": -0.040709695934128466,
+            "ci_low": -0.08774171311269764,
+            "ci_high": 0.0,
+            "routes": 6,
+            "permutation_p": 0.5007649923500765,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": 0.026638940197238604,
+            "ci_low": 0.0,
+            "ci_high": 0.07991682059171581,
+            "routes": 6,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          }
+        },
+        "time_ga_vs_astar_flight_duration_s": {
+          "procedural": {
+            "mean": 1.240233540670662,
+            "ci_low": 0.6960360106707895,
+            "ci_high": 2.081671432425106,
+            "routes": 6,
+            "permutation_p": 0.03025969740302597,
+            "holm_adjusted_p": 0.2723372766272337
+          },
+          "urbanscene3d": {
+            "mean": 3.222656153019907,
+            "ci_low": 1.6904740264404043,
+            "ci_high": 4.857139342531638,
+            "routes": 6,
+            "permutation_p": 0.03025969740302597,
+            "holm_adjusted_p": 0.2723372766272337
+          }
+        },
+        "time_ga_vs_proxy_ga_flight_duration_s": {
+          "procedural": {
+            "mean": 0.04191774381919353,
+            "ci_low": 0.0,
+            "ci_high": 0.09018747090671331,
+            "routes": 6,
+            "permutation_p": 0.5007649923500765,
+            "holm_adjusted_p": 1.0
+          },
+          "urbanscene3d": {
+            "mean": -0.02701757607855372,
+            "ci_low": -0.08105272823566116,
+            "ci_high": 0.0,
+            "routes": 6,
+            "permutation_p": 1.0,
+            "holm_adjusted_p": 1.0
+          }
+        }
+      },
+      "by_planner": {
+        "procedural": {
+          "astar": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 221.7497503690621,
+            "mean_duration_s": 85.79602118345018,
+            "mean_energy_j": 15529.970668815262,
+            "mean_retained_stops": 5.333333333333333
+          },
+          "rrt_star": {
+            "attempts": 30,
+            "accepted": 29,
+            "mean_length_m": 235.28239116559834,
+            "mean_duration_s": 91.69544988994156,
+            "mean_energy_j": 16586.7660022064,
+            "mean_retained_stops": 5.551724137931035
+          },
+          "distance_ga": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 220.48902277272182,
+            "mean_duration_s": 85.15020272687751,
+            "mean_energy_j": 15414.536629910983,
+            "mean_retained_stops": 5.3
+          },
+          "proxy_ga": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 221.3221070595869,
+            "mean_duration_s": 84.74906514557341,
+            "mean_energy_j": 15345.45830977423,
+            "mean_retained_stops": 5.166666666666667
+          },
+          "time_ga": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 221.25637818261433,
+            "mean_duration_s": 84.71300815882927,
+            "mean_energy_j": 15339.154242178867,
+            "mean_retained_stops": 5.166666666666667
+          },
+          "energy_ga": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 221.28432639082834,
+            "mean_duration_s": 84.74986240712799,
+            "mean_energy_j": 15345.445438059138,
+            "mean_retained_stops": 5.166666666666667
+          }
+        },
+        "urbanscene3d": {
+          "astar": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 198.05683223055192,
+            "mean_duration_s": 88.56314917817593,
+            "mean_energy_j": 15975.567047622546,
+            "mean_retained_stops": 6.5
+          },
+          "rrt_star": {
+            "attempts": 30,
+            "accepted": 3,
+            "mean_length_m": 215.5339685252893,
+            "mean_duration_s": 85.00596562874875,
+            "mean_energy_j": 15381.65617086469,
+            "mean_retained_stops": 5.333333333333333
+          },
+          "distance_ga": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 196.341214680428,
+            "mean_duration_s": 86.9522067558877,
+            "mean_energy_j": 15684.215657330173,
+            "mean_retained_stops": 5.966666666666667
+          },
+          "proxy_ga": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 198.42868008027662,
+            "mean_duration_s": 85.46123422980925,
+            "mean_energy_j": 15417.242888825296,
+            "mean_retained_stops": 5.3
+          },
+          "time_ga": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 198.36078729507864,
+            "mean_duration_s": 85.48643851593506,
+            "mean_energy_j": 15421.582642300207,
+            "mean_retained_stops": 5.3
+          },
+          "energy_ga": {
+            "attempts": 30,
+            "accepted": 30,
+            "mean_length_m": 198.36078729507864,
+            "mean_duration_s": 85.48643851593506,
+            "mean_energy_j": 15421.582642300207,
+            "mean_retained_stops": 5.3
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "rule": "-------------------------------------------------\nCandidate endpoints are the nodes of the 4 m A* lattice at z = 10 m that are\nvalid after obstacle inflation with the urban settings and lie in the largest\nconnected component of valid lattice nodes over the whole flight band, where\ntwo 26-neighbouring nodes are connected when the segment between them is\nclear. This guarantees that a collision-free path exists; it uses only the\ncollision checker, not a planner.\n\nFive routes per tile are then chosen greedily: route k is the candidate pair\nwith the largest straight-line distance whose two endpoints are both at least\n24 m from every endpoint of routes 0..k-1 (ties: lexicographically smallest\nstart, then goal, with start < goal). Routes 0, 2, 4 are development and\nroutes 1, 3 are held out, which interleaves route lengths across the split.\nAs in v0.3.0 there are 3 development and 2 held-out routes per scene, and no\nsetting is tuned on either set.\n\nRevision note: a first version of this rule (snap the v0.3.0 corner pairs to\nthe nearest node connected within the z = 10 m plane) was dry-run on the\ntiles before any planner ran. It moved endpoints by up to 115 m and produced\nduplicated and near-identical development/held-out routes, so it was replaced\nby the rule above. No planner output informed the change.",
+  "registry_version": "0.4.0",
+  "z_m": 10.0,
+  "grid_step_m": 4.0,
+  "scenes": {
+    "PolyTech_t0": {
+      "valid_nodes": 5250,
+      "largest_component_nodes": 4063,
+      "lattice_nodes": 13448,
+      "candidate_endpoints": 430,
+      "boxes": 2170,
+      "development": [
+        {
+          "selection_rank": 0,
+          "start": [
+            0.0,
+            0.0,
+            10.0
+          ],
+          "goal": [
+            160.0,
+            148.0,
+            10.0
+          ],
+          "straight_line_m": 217.95412361320444
+        },
+        {
+          "selection_rank": 2,
+          "start": [
+            0.0,
+            24.0,
+            10.0
+          ],
+          "goal": [
+            160.0,
+            100.0,
+            10.0
+          ],
+          "straight_line_m": 177.13271860387624
+        },
+        {
+          "selection_rank": 4,
+          "start": [
+            0.0,
+            48.0,
+            10.0
+          ],
+          "goal": [
+            136.0,
+            100.0,
+            10.0
+          ],
+          "straight_line_m": 145.60219778561037
+        }
+      ],
+      "heldout": [
+        {
+          "selection_rank": 1,
+          "start": [
+            24.0,
+            0.0,
+            10.0
+          ],
+          "goal": [
+            132.0,
+            160.0,
+            10.0
+          ],
+          "straight_line_m": 193.03885619221847
+        },
+        {
+          "selection_rank": 3,
+          "start": [
+            24.0,
+            24.0,
+            10.0
+          ],
+          "goal": [
+            108.0,
+            160.0,
+            10.0
+          ],
+          "straight_line_m": 159.84992962150469
+        }
+      ]
+    },
+    "ArtSci_t0": {
+      "valid_nodes": 5930,
+      "largest_component_nodes": 5841,
+      "lattice_nodes": 13448,
+      "candidate_endpoints": 542,
+      "boxes": 5788,
+      "development": [
+        {
+          "selection_rank": 0,
+          "start": [
+            0.0,
+            48.0,
+            10.0
+          ],
+          "goal": [
+            160.0,
+            136.0,
+            10.0
+          ],
+          "straight_line_m": 182.60339536821323
+        },
+        {
+          "selection_rank": 2,
+          "start": [
+            96.0,
+            0.0,
+            10.0
+          ],
+          "goal": [
+            120.0,
+            160.0,
+            10.0
+          ],
+          "straight_line_m": 161.78998732925348
+        },
+        {
+          "selection_rank": 4,
+          "start": [
+            32.0,
+            56.0,
+            10.0
+          ],
+          "goal": [
+            160.0,
+            112.0,
+            10.0
+          ],
+          "straight_line_m": 139.71399357258383
+        }
+      ],
+      "heldout": [
+        {
+          "selection_rank": 1,
+          "start": [
+            20.0,
+            32.0,
+            10.0
+          ],
+          "goal": [
+            144.0,
+            156.0,
+            10.0
+          ],
+          "straight_line_m": 175.36248173426378
+        },
+        {
+          "selection_rank": 3,
+          "start": [
+            16.0,
+            76.0,
+            10.0
+          ],
+          "goal": [
+            160.0,
+            20.0,
+            10.0
+          ],
+          "straight_line_m": 154.50566332662373
+        }
+      ]
+    },
+    "ArtSci_t1": {
+      "valid_nodes": 7017,
+      "largest_component_nodes": 4145,
+      "lattice_nodes": 13448,
+      "candidate_endpoints": 452,
+      "boxes": 5343,
+      "development": [
+        {
+          "selection_rank": 0,
+          "start": [
+            0.0,
+            160.0,
+            10.0
+          ],
+          "goal": [
+            84.0,
+            0.0,
+            10.0
+          ],
+          "straight_line_m": 180.7097119692243
+        },
+        {
+          "selection_rank": 2,
+          "start": [
+            4.0,
+            132.0,
+            10.0
+          ],
+          "goal": [
+            144.0,
+            92.0,
+            10.0
+          ],
+          "straight_line_m": 145.60219778561037
+        },
+        {
+          "selection_rank": 4,
+          "start": [
+            0.0,
+            76.0,
+            10.0
+          ],
+          "goal": [
+            136.0,
+            120.0,
+            10.0
+          ],
+          "straight_line_m": 142.9405470816451
+        }
+      ],
+      "heldout": [
+        {
+          "selection_rank": 1,
+          "start": [
+            4.0,
+            52.0,
+            10.0
+          ],
+          "goal": [
+            160.0,
+            112.0,
+            10.0
+          ],
+          "straight_line_m": 167.14065932620943
+        },
+        {
+          "selection_rank": 3,
+          "start": [
+            24.0,
+            160.0,
+            10.0
+          ],
+          "goal": [
+            76.0,
+            24.0,
+            10.0
+          ],
+          "straight_line_m": 145.60219778561037
+        }
+      ]
+    }
+  }
+}
