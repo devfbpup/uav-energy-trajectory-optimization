@@ -4,7 +4,7 @@ Reproducible benchmark code for the paper *"Evolutionary Trajectory Optimization
 Energy-Constrained UAVs in Dense Urban Environments: A Data-Driven Approach using
 UrbanScene3D"*.
 
-**Version 0.4.0** — adds the v0.3.0 protocol on registered UrbanScene3D tiles (`v040/`). The v0.3.0
+**Version 0.4.0**: adds the v0.3.0 protocol on registered UrbanScene3D tiles (`v040/`). The v0.3.0
 artefacts are unchanged and still verify with `reproduce.py --check` and `audit.py`.
 
 Authors:
