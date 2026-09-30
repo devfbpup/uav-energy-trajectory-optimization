@@ -156,7 +156,7 @@ They are **model** energies, not measured battery consumption.
 
 ## Citation
 
-Cite the specific archived **version DOI** for v0.3.0 alongside the concept DOI
+Cite the specific archived **version DOI** for v0.4.0 alongside the concept DOI
 `10.5281/zenodo.22679145`, which always resolves to the newest version. See `CITATION.cff`.
 
 ## License
