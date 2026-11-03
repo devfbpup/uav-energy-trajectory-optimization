@@ -1,0 +1,58 @@
+{'main/development': 450, 'main/heldout': 300, 'tiles/development': 225, 'tiles/heldout': 150}
+fly-through done
+max chord deviation 0.499 m, waypoints flown through 99.6%
+
+ main/development  rest-check max |dE| 9.09e-13 J
+   astar        rest E   8020.0   fly E   7641.4   fly T   42.8 s
+   distance_ga  rest E   7998.4   fly E   7597.2   fly T   42.6 s
+   proxy_ga     rest E   7908.7   fly E   7570.3   fly T   42.4 s
+   time_ga      rest E   7912.4   fly E   7564.4   fly T   42.4 s
+   energy_ga    rest E   7907.9   fly E   7569.5   fly T   42.4 s
+   energy_ga_vs_astar       rest  2.273%   fly  1.635% CI ['0.002', '4.320'] p=0.117   (time  1.634%)
+   energy_ga_vs_distance_ga rest  2.048%   fly  1.275% CI ['-0.284', '3.869'] p=0.493   (time  1.272%)
+   energy_ga_vs_time_ga     rest  0.049%   fly  0.035% CI ['-0.126', '0.179'] p=0.752   (time  0.037%)
+
+ main/heldout  rest-check max |dE| 0.00e+00 J
+   astar        rest E   9459.0   fly E   9003.6   fly T   50.5 s
+   distance_ga  rest E   9395.5   fly E   8904.6   fly T   49.9 s
+   proxy_ga     rest E   9348.9   fly E   8910.7   fly T   50.0 s
+   time_ga      rest E   9342.9   fly E   8906.3   fly T   49.9 s
+   energy_ga    rest E   9348.3   fly E   8913.6   fly T   50.0 s
+   energy_ga_vs_astar       rest  1.014%   fly  0.439% CI ['-0.270', '1.250'] p=0.334   (time  0.438%)
+   energy_ga_vs_distance_ga rest  0.517%   fly -0.297% CI ['-0.827', '0.027'] p=0.226   (time -0.298%)
+   energy_ga_vs_time_ga     rest -0.078%   fly -0.090% CI ['-0.272', '0.063'] p=0.375   (time -0.090%)
+
+ tiles/development  rest-check max |dE| 7.28e-12 J
+   astar        rest E  16477.1   fly E  15678.4   fly T   87.9 s
+   distance_ga  rest E  16240.5   fly E  15441.0   fly T   86.6 s
+   proxy_ga     rest E  16097.6   fly E  15439.1   fly T   86.6 s
+   time_ga      rest E  16103.4   fly E  15442.6   fly T   86.6 s
+   energy_ga    rest E  16098.6   fly E  15440.0   fly T   86.6 s
+   energy_ga_vs_astar       rest  2.207%   fly  1.537% CI ['0.792', '2.395'] p=0.008   (time  1.538%)
+   energy_ga_vs_distance_ga rest  0.808%   fly  0.032% CI ['-0.196', '0.276'] p=0.812   (time  0.032%)
+   energy_ga_vs_time_ga     rest  0.030%   fly  0.017% CI ['-0.039', '0.090'] p=1.000   (time  0.017%)
+
+ tiles/heldout  rest-check max |dE| 7.28e-12 J
+   astar        rest E  15975.6   fly E  15186.7   fly T   85.1 s
+   distance_ga  rest E  15684.2   fly E  14900.9   fly T   83.5 s
+   proxy_ga     rest E  15417.2   fly E  14878.7   fly T   83.4 s
+   time_ga      rest E  15421.6   fly E  14880.1   fly T   83.4 s
+   energy_ga    rest E  15421.6   fly E  14880.1   fly T   83.4 s
+   energy_ga_vs_astar       rest  3.213%   fly  1.995% CI ['0.810', '3.142'] p=0.062   (time  1.993%)
+   energy_ga_vs_distance_ga rest  1.525%   fly  0.156% CI ['-0.251', '0.631'] p=0.688   (time  0.156%)
+   energy_ga_vs_time_ga     rest  0.000%   fly  0.000% CI ['0.000', '0.000'] p=1.000   (time  0.000%)
+
+sensitivity: 315 settings, hover 98.1-520.7 W
+  main/development energy_ga_vs_astar              nominal  2.273%  range  2.214 ..  2.305
+  main/development energy_ga_vs_distance_ga        nominal  2.048%  range  1.989 ..  2.080
+  main/development energy_ga_vs_time_ga            nominal  0.049%  range  0.049 ..  0.050
+  main/heldout energy_ga_vs_astar                  nominal  1.014%  range  0.993 ..  1.026
+  main/heldout energy_ga_vs_distance_ga            nominal  0.517%  range  0.497 ..  0.528
+  main/heldout energy_ga_vs_time_ga                nominal -0.078%  range -0.086 .. -0.064
+  tiles/development energy_ga_vs_astar             nominal  2.207%  range  2.161 ..  2.234
+  tiles/development energy_ga_vs_distance_ga       nominal  0.808%  range  0.780 ..  0.825
+  tiles/development energy_ga_vs_time_ga           nominal  0.030%  range  0.029 ..  0.030
+  tiles/heldout energy_ga_vs_astar                 nominal  3.213%  range  3.151 ..  3.250
+  tiles/heldout energy_ga_vs_distance_ga           nominal  1.525%  range  1.479 ..  1.552
+  tiles/heldout energy_ga_vs_time_ga               nominal  0.000%  range  0.000 ..  0.000
+exit 0
