@@ -149,8 +149,18 @@ def chord_dev(pos, p0, p1):
     return np.linalg.norm(pos - (p0 + t[..., None] * d), axis=-1)
 
 
-def min_time(p0, p1, v0, v1):
-    """Smallest duration on a geometric grid meeting the limits and the chord bound."""
+# workspace boxes of the planner (uav_planning.scenario, urban_scenes.URBAN_WORKSPACE_*)
+BOX_SYNTHETIC = (np.array([0.0, 0.0, 2.0]), np.array([40.0, 40.0, 18.0]))
+BOX_URBAN = (np.array([0.0, 0.0, 2.0]), np.array([160.0, 160.0, 30.0]))
+
+
+def workspace(r):
+    return BOX_SYNTHETIC if r.get("scene_kind") == "synthetic" else BOX_URBAN
+
+
+def min_time(p0, p1, v0, v1, box):
+    """Smallest duration on a geometric grid meeting the limits, the chord bound and
+    the workspace box (the same box the planner's own validity check uses)."""
     L = float(np.linalg.norm(p1 - p0))
     lo = max(L / CFG.max_speed, 0.2)
     hi = 4.0 * float(u.durations(np.array([p0, p1]), CFG)[0])
@@ -159,12 +169,13 @@ def min_time(p0, p1, v0, v1):
     ok = ((np.linalg.norm(vel, axis=-1).max(-1) <= 0.99 * CFG.max_speed)
           & (np.linalg.norm(acc, axis=-1).max(-1) <= 0.99 * CFG.max_acceleration)
           & (np.abs(vel[..., 2]).max(-1) <= 0.99 * CFG.max_vertical_speed)
-          & (chord_dev(pos, p0, p1).max(-1) <= MAX_DEV))
+          & (chord_dev(pos, p0, p1).max(-1) <= MAX_DEV)
+          & np.all(pos >= box[0], axis=(-1, -2)) & np.all(pos <= box[1], axis=(-1, -2)))
     i = np.flatnonzero(ok)
     return (float(grid[i[0]]), float(chord_dev(pos[i[0]], p0, p1).max())) if len(i) else (None, None)
 
 
-def fly_through(path):
+def fly_through(path, box):
     n = len(path)
     if n == 2:
         return u.durations(path, CFG), np.zeros((2, 3)), 0.0
@@ -186,7 +197,7 @@ def fly_through(path):
             if speed[j] == 0 and speed[j + 1] == 0:
                 times[j] = u.durations(path[j:j + 2], CFG)[0]
                 continue
-            T, dv = min_time(path[j], path[j + 1], vel[j], vel[j + 1])
+            T, dv = min_time(path[j], path[j + 1], vel[j], vel[j + 1], box)
             if T is None:
                 bad.append(j)
             else:
@@ -200,10 +211,11 @@ def fly_through(path):
 
 
 def fly_energy(path, times, vel, prop=NOM):
+    """Gauss-Legendre integral of power over every segment (v, a have shape (24, 3))."""
     e = 0.0
     for j in range(len(path) - 1):
         _, v, a = seg_eval(path[j], path[j + 1], vel[j], vel[j + 1], times[j], TAU)
-        e += float(np.sum(times[j] * W * prop.electrical_power_w(a[0], v[0])))
+        e += float(times[j] * np.sum(W * prop.electrical_power_w(a, v)))
     return e
 
 
@@ -211,10 +223,14 @@ def flythrough(recs):
     out, maxdev, kept = {}, 0.0, []
     for g, rows in recs.items():
         for r in rows:
-            t, v, dv = fly_through(r["_p"])
+            t, v, dv = fly_through(r["_p"], workspace(r))
             r["_fe"] = fly_energy(r["_p"], t, v)
             r["_ft"] = float(np.sum(t))
             r["_rest_check"] = rest_energy(r["_p"], r["_t"], NOM) - r["model_electrical_energy_j"]
+            # the fly-through integrator itself, at zero waypoint speed and the stored
+            # rest-to-rest durations, must reproduce the recorded energy
+            r["_fly_rest_check"] = (fly_energy(r["_p"], r["_t"], np.zeros((len(r["_p"]), 3)))
+                                    - r["model_electrical_energy_j"])
             interior = np.linalg.norm(v[1:-1], axis=1) if len(v) > 2 else np.array([])
             kept.append(np.mean(interior > 0) if len(interior) else 1.0)
             maxdev = max(maxdev, dv)
@@ -226,7 +242,8 @@ def flythrough(recs):
             mean_energy={p: float(np.mean([r["_fe"] for r in rows if r["planner"] == p])) for p in PLANNERS},
             mean_rest_energy={p: float(np.mean([r["model_electrical_energy_j"] for r in rows if r["planner"] == p])) for p in PLANNERS},
             mean_time={p: float(np.mean([r["_ft"] for r in rows if r["planner"] == p])) for p in PLANNERS},
-            max_rest_check_j=float(max(abs(r["_rest_check"]) for r in rows)))
+            max_rest_check_j=float(max(abs(r["_rest_check"]) for r in rows)),
+            max_fly_integrator_check_j=float(max(abs(r["_fly_rest_check"]) for r in rows)))
     return dict(groups=out, max_chord_deviation_m=maxdev,
                 share_of_waypoints_flown_through=float(np.mean(kept)))
 
@@ -242,7 +259,8 @@ if __name__ == "__main__":
     print("max chord deviation %.3f m, waypoints flown through %.1f%%"
           % (F["max_chord_deviation_m"], 100 * F["share_of_waypoints_flown_through"]))
     for g, d in F["groups"].items():
-        print("\n", g, " rest-check max |dE| %.2e J" % d["max_rest_check_j"])
+        print("\n", g, " rest-check max |dE| %.2e J, fly integrator at zero speed max |dE| %.2e J"
+              % (d["max_rest_check_j"], d["max_fly_integrator_check_j"]))
         for p in PLANNERS:
             print("   %-12s rest E %8.1f   fly E %8.1f   fly T %6.1f s"
                   % (p, d["mean_rest_energy"][p], d["mean_energy"][p], d["mean_time"][p]))

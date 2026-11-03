@@ -1,0 +1,5 @@
+min margin inside lower workspace bounds: -0.0000 m
+min margin inside upper workspace bounds: -0.0000 m
+max chord deviation at 1001 samples/segment: 0.4995 m
+interior waypoints flown through: 2998 of 3975 (75.4%)
+exit 0
